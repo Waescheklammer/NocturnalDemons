@@ -1,14 +1,19 @@
-import { Box, List, Typography, Toolbar } from "@mui/material";
+import { Toolbar } from "@mui/material";
 import { NavigationLink } from "../../components/NavigationLink";
-export const Header = () => {
-    return (
+import { Link } from "react-router-dom";
 
-        <Toolbar sx={{width: '45%', justifyContent: 'space-between', mx: 'auto'}}>
-                <NavigationLink title={"Tickets"} link={"Tickets"} />
-                <NavigationLink title={"Location"} link={"Location"} />
-                <img src={"/logo.png"} alt={"Nocturnal Demons"} style={{ width: '10em', height: '5em' }}/>
-                <NavigationLink title={"Gallery"} link={"Gallery"} />
-                <NavigationLink title={"Info"} link={"Info"} />
-        </Toolbar>
-    )
-}
+export const Header = () => {
+  return (
+    <Toolbar sx={{ width: "45%", justifyContent: "space-between", mx: "auto" }}>
+      <NavigationLink title={"TICKETS"} link={"Tickets"} />
+      <NavigationLink title={"LOCATION"} link={"location"} />
+      <img
+        src={"/logo.png"}
+        alt={"Nocturnal Demons"}
+        style={{ width: "10em", height: "5em" }}
+      />
+      <NavigationLink title={"GALLERY"} link={"gallery"} />
+      <NavigationLink title={"INFO"} link={"contact"} />
+    </Toolbar>
+  );
+};
