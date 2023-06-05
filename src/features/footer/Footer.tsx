@@ -20,9 +20,10 @@ export const Footer = () => {
     <Box
       sx={{
         width: "100%",
-        borderTop: "1px solid #b5181e",
+        borderTop: "3px solid #b5181e",
         pt: "2em",
         pb: "1em",
+        backgroundColor: "secondary.main",
       }}
     >
       <Box sx={{ gap: "1em", mb: "1em" }}>
@@ -37,7 +38,7 @@ export const Footer = () => {
         <img
           src={"/logo.png"}
           alt={"Nocturnal Demons"}
-          style={{ width: "1em", flex: "1", height: "9em", marginLeft: "3em" }}
+          style={{ flex: "1", height: "10em", marginLeft: "3em" }}
         />
         <Box
           sx={{

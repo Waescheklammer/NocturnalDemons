@@ -38,15 +38,15 @@ const glitchBottom = keyframes`
 
 export const GlitchTypography = styled(Box)(() => ({
   "&:hover": {
-    animation: `${glitch} 1s linear infinite`,
+    animation: `${glitch} 1s linear 1`,
   },
   "&:before": {
-    animation: `${glitchTop} 1s linear infinite`,
+    animation: `${glitchTop} 1s linear 1`,
     clipPath: "polygon(0 0, 100% 0, 100% 33%, 0 33%)",
     webkitClipPath: "polygon(0 0, 100% 0, 100% 33%, 0 33%)",
   },
   "&:after": {
-    animation: `${glitchBottom} 1.5s linear infinite`,
+    animation: `${glitchBottom} 1.5s linear 1`,
     clipPath: "polygon(0 67%, 100% 67%, 100% 100%, 0 100%)",
     webkitClipPath: "polygon(0 67%, 100% 67%, 100% 100%, 0 100%)",
   },
