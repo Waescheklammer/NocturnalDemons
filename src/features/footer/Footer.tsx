@@ -1,13 +1,23 @@
 import React from "react";
-import { Box, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { GlitchTypography } from "../../components/GlitchTypography";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { changeBgc } from "../../util/utils";
 
 const FooterLink = styled(Link)(({ theme }) => ({
   color: theme.palette.secondary.light,
   textDecoration: "none",
+  width: "5em",
   transition: "0.3s",
   "&:hover": {
     cursor: "pointer",
@@ -16,8 +26,18 @@ const FooterLink = styled(Link)(({ theme }) => ({
 }));
 
 export const Footer = () => {
+  const matches = useMediaQuery("(max-width:600px)");
+  const theme = useTheme();
+  const { t } = useTranslation("footer");
+
+  const handleRouting = () => {
+    changeBgc(
+      matches ? theme.palette.primary.dark : theme.palette.secondary.main
+    );
+  };
+
   return (
-    <Box
+    <Grid
       sx={{
         width: "100%",
         borderTop: "3px solid #b5181e",
@@ -26,54 +46,79 @@ export const Footer = () => {
         backgroundColor: "secondary.main",
       }}
     >
-      <Box sx={{ gap: "1em", mb: "1em" }}>
-        <FooterLink to="https://facebook.com">
-          <FacebookIcon />
-        </FooterLink>
-        <FooterLink to="https://www.instagram.com/nocturnal.demons/">
-          <InstagramIcon />
-        </FooterLink>
-      </Box>
-      <Box sx={{ display: "flex", flexDirection: "row" }}>
-        <img
-          src={"/logo.png"}
-          alt={"Nocturnal Demons"}
-          style={{ flex: "1", height: "10em", marginLeft: "3em" }}
-        />
-        <Box
-          sx={{
-            color: "secondary.light",
-            display: "flex",
-            flexDirection: "row",
-            flex: "3",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <Box>
-            <Typography variant={"h5"}>CONTACT US</Typography>
-          </Box>
-          <Box>
-            <Typography variant={"h5"} sx={{ mb: "1em" }}>
-              INFO
-            </Typography>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: "1em" }}>
-              <FooterLink to={"/privacy"}>
-                <GlitchTypography>
-                  <Typography variant={"subtitle2"}>PRIVACY</Typography>
-                </GlitchTypography>
-              </FooterLink>
-              <FooterLink to={"/imprint"}>
-                <GlitchTypography>
-                  <Typography variant={"subtitle2"}>IMPRINT</Typography>
-                </GlitchTypography>
-              </FooterLink>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-      <Typography sx={{ color: "secondary.dark", mt: "3em", fontSize: "11px" }}>
-        © Copyright 2023 nocturnal-demons.de
-      </Typography>
-    </Box>
+      <Grid container>
+        <Grid item xs={12} md={12}>
+          <FooterLink to="https://facebook.com">
+            <FacebookIcon />
+          </FooterLink>
+          <FooterLink to="https://www.instagram.com/nocturnal.demons/">
+            <InstagramIcon />
+          </FooterLink>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          {matches ? (
+            <img
+              src={"/text.png"}
+              alt={"Nocturnal Demons"}
+              style={{ height: "5em" }}
+            />
+          ) : (
+            <img
+              src={"/logo.png"}
+              alt={"Nocturnal Demons"}
+              style={{ height: "10em" }}
+            />
+          )}
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <Grid
+            container
+            sx={{ color: "secondary.light" }}
+          >
+            <Grid item xs={12} md={6} sx={{ mx: "auto" }}>
+              <Typography variant={"h5"}>{t("contact")}</Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              {!matches && (
+                <Typography variant={"h5"} sx={{ mb: "1em" }}>
+                  {t("info")}
+                </Typography>
+              )}
+              <Grid container>
+                <Grid item xs={12}>
+                  <Box sx={{ width: "5em", mx: "auto", mb: "0.5em" }}>
+                    <FooterLink to={"/privacy"} onClick={handleRouting}>
+                      <GlitchTypography>
+                        <Typography variant={"subtitle2"}>
+                          {t("privacy")}
+                        </Typography>
+                      </GlitchTypography>
+                    </FooterLink>
+                  </Box>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box sx={{ width: "5em", mx: "auto" }}>
+                    <FooterLink to={"/imprint"} onClick={handleRouting}>
+                      <GlitchTypography>
+                        <Typography variant={"subtitle2"}>
+                          {t("imprint")}
+                        </Typography>
+                      </GlitchTypography>
+                    </FooterLink>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={12}>
+          <Typography
+            sx={{ color: "secondary.dark", mt: "3em", fontSize: "11px" }}
+          >
+            © Copyright 2023 nocturnal-demons.de
+          </Typography>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };

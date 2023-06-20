@@ -5,11 +5,12 @@ import { Footer } from "./features/footer/Footer";
 import { Menu } from "./features/Menu/Menu";
 import { Box, createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import { Main } from "./features/main/Main";
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 import "./i18n";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useReactPath } from "./hooks/ReactPath";
 
 const theme = createTheme({
   palette: {
@@ -30,15 +31,18 @@ const theme = createTheme({
 });
 
 function App() {
+  const path = useReactPath();
+
   const [open, setOpen] = useState(false);
-
   const matches = useMediaQuery("(max-width:600px)");
-
   const [isDetails, setIsDetails] = useState(false);
 
   useEffect(() => {
-    setIsDetails(window.location.href.includes("/details"))
-  }, [window.location.href])
+    setIsDetails(
+      window.location.pathname.includes("/details") ||
+        window.location.pathname.includes("/")
+    );
+  }, [path]);
 
   const toggleOpen = () => {
     setOpen(!open);
@@ -59,14 +63,15 @@ function App() {
               >
                 <MenuIcon
                   sx={{
-                    color: open || isDetails ? "secondary.light" : "secondary.main",
+                    color:
+                      open || isDetails ? "secondary.light" : "secondary.main",
                     zIndex: "999",
                     position: "fixed",
                     width: "2em",
                     height: "2em",
                     mr: "0.5em",
                     mt: "0.5em",
-                    transition: "2s",
+                    transition: "1s",
                   }}
                   onClick={toggleOpen}
                 ></MenuIcon>
@@ -75,6 +80,7 @@ function App() {
                 ) : (
                   <Box>
                     <Main></Main>
+                    <Footer></Footer>
                   </Box>
                 )}
               </Box>

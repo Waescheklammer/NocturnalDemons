@@ -1,9 +1,11 @@
 import { Box, Grid, styled, Typography, Link } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GlitchTypography } from "../../components/GlitchTypography";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import i18n from "../../i18n";
+import { Lang } from "../../data/enums/Lang";
 
 const MenuItem = styled(Grid)(({ theme }) => ({
   paddingTop: "2em",
@@ -18,6 +20,9 @@ const MenuItem = styled(Grid)(({ theme }) => ({
 
 export const Menu = () => {
   const { t } = useTranslation("links");
+  const [lang, setLang] = useState<string>(
+    localStorage.getItem("lng") || Lang.de
+  );
 
   const items = [
     { title: "event", link: "" },
@@ -28,6 +33,25 @@ export const Menu = () => {
     { title: "privacy", link: "privacy" },
     { title: "imprint", link: "imprint" },
   ];
+
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
+
+  const changeToEn = () => {
+    setLang(Lang.en);
+    localStorage.setItem("lng", Lang.en);
+  };
+
+  const changeToDe = () => {
+    setLang(Lang.de);
+    localStorage.setItem("lng", Lang.de);
+  };
+
+  const changeToCz = () => {
+    setLang(Lang.cz);
+    localStorage.setItem("lng", Lang.cz);
+  };
 
   return (
     <Box
@@ -88,6 +112,28 @@ export const Menu = () => {
               sx={{ color: "white", width: "1.5em", height: "1.5em" }}
             ></InstagramIcon>
           </Link>
+        </Grid>
+        <Grid item>
+          <Grid container sx={{ justifyContent: "center", gap: "0.5em" }}>
+            <img
+              src={"/deutschland.png"}
+              alt={"Nocturnal Demons"}
+              style={{ width: "2em", height: "2em" }}
+              onClick={changeToDe}
+            />
+            <img
+              src={"/grossbritannien.png"}
+              alt={"Nocturnal Demons"}
+              style={{ width: "2em", height: "2em" }}
+              onClick={changeToEn}
+            />
+            <img
+                src={"/czech.png"}
+                alt={"Nocturnal Demons"}
+                style={{ width: "2em", height: "2em" }}
+                onClick={changeToEn}
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Box>
