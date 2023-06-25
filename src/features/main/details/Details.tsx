@@ -172,7 +172,7 @@ export const Details = () => {
           {acts.map((a) => (
             <Grid item xs={6} md={3} key={a.name}>
               <img
-                src={"/nostromo3.jpg"}
+                src={events.imgCover}
                 alt={"Nocturnal Demons"}
                 style={{ width: "80%" }}
                 loading="lazy"
