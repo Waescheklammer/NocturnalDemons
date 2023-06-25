@@ -38,7 +38,7 @@ export const Header = () => {
               <Grid item xs={5} sx={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', gap: '2em', my: 'auto'}}>
                 {!matches && (
                     <img
-                        src={"/leftHand.png"}
+                        src={"/images/logo/leftHand.png"}
                         alt={"Nocturnal Demons"}
                         style={{ width: "2em", height: "2em" }}
                     />
@@ -53,7 +53,7 @@ export const Header = () => {
               <Grid item xs={2}>
                 <Link to={"/"} onClick={() => changeBgc(theme.palette.secondary.light)}>
                   <img
-                      src={"/text.png"}
+                      src={"/images/logo/text.png"}
                       alt={"Nocturnal Demons"}
                       style={{ width: !matches ? "10em" : "8em", height: "5em" }}
                   />
@@ -64,7 +64,7 @@ export const Header = () => {
                 <NavigationLink title={t("info")} link={"/contact"} />
                 {!matches && (
                     <img
-                        src={"/rightHand.png"}
+                        src={"/images/logo/rightHand.png"}
                         alt={"Nocturnal Demons"}
                         style={{ width: "2em", height: "2em" }}
                     />
@@ -88,7 +88,7 @@ export const Header = () => {
               >
                 <MenuItem value={Lang.de}>
                   <img
-                      src={"/deutschland.png"}
+                      src={"/images/flags/deutschland.png"}
                       alt={Lang.de}
                       style={{ width: "2em", height: "2em" }}
                       loading="lazy"
@@ -96,7 +96,7 @@ export const Header = () => {
                 </MenuItem>
                 <MenuItem value={Lang.en}>
                   <img
-                      src={"/grossbritannien.png"}
+                      src={"/images/flags/grossbritannien.png"}
                       alt={Lang.en}
                       style={{ width: "2em", height: "2em" }}
                       loading="lazy"
@@ -104,7 +104,7 @@ export const Header = () => {
                 </MenuItem>
                 <MenuItem value={Lang.cz}>
                   <img
-                      src={"/czech.png"}
+                      src={"/images/flags/czech.png"}
                       alt={Lang.cz}
                       style={{ width: "2em", height: "2em" }}
                       loading="lazy"
@@ -112,7 +112,7 @@ export const Header = () => {
                 </MenuItem>
                 <MenuItem value={Lang.pl}>
                   <img
-                      src={"/poland.png"}
+                      src={"/images/flags/poland.png"}
                       alt={Lang.pl}
                       style={{ width: "2em", height: "2em" }}
                       loading="lazy"

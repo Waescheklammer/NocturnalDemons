@@ -91,7 +91,7 @@ export const Menu = () => {
           }}
         >
           <img
-            src={"/textless.png"}
+            src={"/images/logo/textless.png"}
             alt={"Nocturnal Demons Head"}
             style={{ width: "5em", height: "3em" }}
           />
@@ -133,28 +133,28 @@ export const Menu = () => {
         <Grid item>
           <Grid container sx={{ justifyContent: "center", gap: "0.5em", backgroundColor: 'secondary.main', pb: '1em' }}>
             <img
-              src={"/deutschland.png"}
+              src={"/images/flags/deutschland.png"}
               alt={"Nocturnal Demons"}
               style={{ width: "2em", height: "2em" }}
               onClick={changeToDe}
               loading="lazy"
             />
             <img
-              src={"/grossbritannien.png"}
+              src={"/images/flags/grossbritannien.png"}
               alt={"Nocturnal Demons"}
               style={{ width: "2em", height: "2em" }}
               onClick={changeToEn}
               loading="lazy"
             />
             <img
-                src={"/czech.png"}
+                src={"/images/flags/czech.png"}
                 alt={"Nocturnal Demons"}
                 style={{ width: "2em", height: "2em" }}
                 onClick={changeToCz}
                 loading="lazy"
             />
             <img
-                src={"/poland.png"}
+                src={"/images/flags/poland.png"}
                 alt={"Nocturnal Demons"}
                 style={{ width: "2em", height: "2em" }}
                 onClick={changeToPl}

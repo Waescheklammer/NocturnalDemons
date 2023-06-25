@@ -52,14 +52,14 @@ export const Footer = () => {
         <Grid item xs={12} md={4}>
           {matches ? (
             <img
-              src={"/text.png"}
+              src={"/images/logo/text.png"}
               alt={"Nocturnal Demons"}
               style={{ height: "5em" }}
               loading="lazy"
             />
           ) : (
             <img
-              src={"/logo.png"}
+              src={"/images/logo/logo.png"}
               alt={"Nocturnal Demons"}
               style={{ height: "10em" }}
               loading="lazy"

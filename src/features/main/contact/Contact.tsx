@@ -8,7 +8,7 @@ export const Contact = () => {
     <Grid container>
       <Grid item xs={12}>
         <img
-          src={"/nocturnalAbout.png"}
+          src={"/images/logo/nocturnalAbout.png"}
           alt={"Nocturnal Demons"}
           style={{
             width: "100%",
