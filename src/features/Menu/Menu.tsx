@@ -85,8 +85,8 @@ export const Menu = () => {
           sx={{
             minHeight: "4.5em",
             display: "flex",
-            justifyContent: "flex-start",
-            pl: "0.5em",
+            justifyContent: "flex-end",
+            pr: "0.5em",
             pt: "0.8em",
           }}
         >

@@ -39,7 +39,7 @@ export const Events = () => {
           </Grid>
         ) : (
           <img
-            src={"/logo.png"}
+            src={"/images/logo/logo.png"}
             alt={"Nocturnal Demons"}
             style={{
               width: "80%",

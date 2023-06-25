@@ -58,7 +58,7 @@ function App() {
                 sx={{
                   width: "100vw",
                   display: "flex",
-                  justifyContent: "flex-end",
+                  justifyContent: "flex-start",
                 }}
               >
                 <MenuIcon
@@ -69,7 +69,7 @@ function App() {
                     position: "fixed",
                     width: "2em",
                     height: "2em",
-                    mr: "0.5em",
+                    ml: "0.5em",
                     mt: "0.5em",
                     transition: "1s",
                   }}
