@@ -37,7 +37,7 @@ export const enCommon = {
     tickets: "Tickets",
     location: "Location",
     map: "Map",
-    acts: "Acts",
+    acts: "Artists",
   },
   imprint: {
     imprint: "Imprint",

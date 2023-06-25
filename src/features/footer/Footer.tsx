@@ -30,12 +30,6 @@ export const Footer = () => {
   const theme = useTheme();
   const { t } = useTranslation("footer");
 
-  const handleRouting = () => {
-    changeBgc(
-      matches ? theme.palette.primary.dark : theme.palette.secondary.main
-    );
-  };
-
   return (
     <Grid
       sx={{
@@ -61,12 +55,14 @@ export const Footer = () => {
               src={"/text.png"}
               alt={"Nocturnal Demons"}
               style={{ height: "5em" }}
+              loading="lazy"
             />
           ) : (
             <img
               src={"/logo.png"}
               alt={"Nocturnal Demons"}
               style={{ height: "10em" }}
+              loading="lazy"
             />
           )}
         </Grid>
@@ -87,7 +83,7 @@ export const Footer = () => {
               <Grid container>
                 <Grid item xs={12}>
                   <Box sx={{ width: "5em", mx: "auto", mb: "0.5em" }}>
-                    <FooterLink to={"/privacy"} onClick={handleRouting}>
+                    <FooterLink to={"/privacy"}>
                       <GlitchTypography>
                         <Typography variant={"subtitle2"}>
                           {t("privacy")}
@@ -98,7 +94,7 @@ export const Footer = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <Box sx={{ width: "5em", mx: "auto" }}>
-                    <FooterLink to={"/imprint"} onClick={handleRouting}>
+                    <FooterLink to={"/imprint"}>
                       <GlitchTypography>
                         <Typography variant={"subtitle2"}>
                           {t("imprint")}

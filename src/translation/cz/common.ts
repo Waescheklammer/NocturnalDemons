@@ -37,7 +37,7 @@ export const czCommon = {
     tickets: "Vstupenky",
     location: "Umístění",
     map: "Mapa",
-    acts: "Umělkyně",
+    acts: "Umělci",
   },
   imprint: {
     imprint: "Imprint",

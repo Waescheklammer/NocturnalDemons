@@ -18,22 +18,13 @@ import { lineUpData } from "../../../data/eventinfo/LineUpData";
 import { acts } from "../../../data/eventinfo/Acts";
 import { events } from "../../../data/eventinfo/Event";
 import { ContentText } from "../../../components/ContentText";
+import { ScrollButton } from "../../../components/ScrollButton";
 
 export const Details = () => {
   const { t } = useTranslation("details");
   const theme = useTheme();
   const matchesPhone = useMediaQuery("(max-width:600px)");
   const matchesTablet = useMediaQuery("(max-width:810px)");
-  const [scrollToTop, setScrollToTop] = useState(false)
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-    setScrollToTop(false)
-  }, [scrollToTop])
-
-  const handleScrolling = () => {
-    setScrollToTop(true)
-  }
 
   changeBgc(theme.palette.secondary.main);
 
@@ -45,6 +36,7 @@ export const Details = () => {
         minHeight: "86vh",
       }}
     >
+      <ScrollButton></ScrollButton>
       <Box sx={{ mb: "3em" }}>
         <img
           src={events.imgCover}
@@ -183,6 +175,7 @@ export const Details = () => {
                 src={"/nostromo3.jpg"}
                 alt={"Nocturnal Demons"}
                 style={{ width: "80%" }}
+                loading="lazy"
               />
               <ContentText variant={"h5"}>{a.name}</ContentText>
               <ContentText variant={"subtitle1"}>
@@ -191,7 +184,6 @@ export const Details = () => {
             </Grid>
           ))}
         </Grid>
-        <Button onClick={handleScrolling} variant={'outlined'} sx={{position: 'fixed', ml: '90vw', mt: '10vh', zIndex: '9999'}}>GUSCHEGOO</Button>
       </Box>
     </Box>
   );

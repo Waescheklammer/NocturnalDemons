@@ -3,9 +3,10 @@ import { GlitchTypography } from "./GlitchTypography";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { changeBgc } from "../util/utils";
+import { useTranslation } from "react-i18next";
 
 const StyledLink = styled(Link)(({ theme }) => ({
-  transition: "0.5s",
+  transition: "0.3s",
   textDecoration: "none",
   "&:hover": {
     cursor: "pointer",
@@ -15,6 +16,13 @@ const StyledLink = styled(Link)(({ theme }) => ({
   },
 }));
 
+const blackPages = [
+    "/details",
+    "/imprint",
+    "/gallery",
+    "/privacy"
+]
+
 export const NavigationLink = ({
   title,
   link,
@@ -23,17 +31,16 @@ export const NavigationLink = ({
   link: string;
 }) => {
   const theme = useTheme();
+  const { t } = useTranslation("links");
   const location = useLocation();
   const [isBlackPage, setIsBlackPage] = useState(false);
 
   useEffect(() => {
-    setIsBlackPage(
-      location.pathname === "/details" || location.pathname === "/imprint" || location.pathname === "/gallery"
-    );
+    setIsBlackPage(blackPages.includes(location.pathname));
   }, [location]);
 
   const handleBgColor = () => {
-    title === "DETAILS"
+    title === t("details") || title === t("gallery")
       ? changeBgc(theme.palette.secondary.main)
       : changeBgc(theme.palette.secondary.light);
   };

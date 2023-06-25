@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import { deCommon } from "./translation/de/common";
 import { enCommon } from "./translation/en/common";
 import { czCommon } from "./translation/cz/common";
-import { Lang } from "./data/enums/Lang";
+import { plCommon } from "./translation/pl/common";
 
 // @ts-ignore
 i18n.use(initReactI18next).init({
@@ -18,11 +18,11 @@ i18n.use(initReactI18next).init({
     de: deCommon,
     en: enCommon,
     cz: czCommon,
+    pl: plCommon,
   },
   detection: {
     order: ['localStorage']
   },
-  lng: localStorage.getItem("lng") || "cz",
 });
 
 export default i18n;

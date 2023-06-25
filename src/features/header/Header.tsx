@@ -72,13 +72,13 @@ export const Header = () => {
               </Grid>
             </Grid>
           </Toolbar>
-          <Box sx={{ position: 'absolute', top: "0.5em", ml: "90vw"}}>
-            <Box sx={{ "&:hover": { cursor: "pointer" } }}>
+          <Box sx={{ position: 'absolute', top: "0.5em", ml: "85vw"}}>
               <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   label="Language"
                   value={lang}
+                  inputProps={{MenuProps: {disableScrollLock: true}}}
                   onChange={handleChange}
                   variant={"standard"}
                   disableUnderline={true}
@@ -86,18 +86,20 @@ export const Header = () => {
                       fill: isDetails ? "white !important" : null,
                     }}}
               >
-                <MenuItem value={Lang.en}>
-                  <img
-                      src={"/grossbritannien.png"}
-                      alt={Lang.en}
-                      style={{ width: "2em", height: "2em" }}
-                  />
-                </MenuItem>
                 <MenuItem value={Lang.de}>
                   <img
                       src={"/deutschland.png"}
                       alt={Lang.de}
                       style={{ width: "2em", height: "2em" }}
+                      loading="lazy"
+                  />
+                </MenuItem>
+                <MenuItem value={Lang.en}>
+                  <img
+                      src={"/grossbritannien.png"}
+                      alt={Lang.en}
+                      style={{ width: "2em", height: "2em" }}
+                      loading="lazy"
                   />
                 </MenuItem>
                 <MenuItem value={Lang.cz}>
@@ -105,10 +107,18 @@ export const Header = () => {
                       src={"/czech.png"}
                       alt={Lang.cz}
                       style={{ width: "2em", height: "2em" }}
+                      loading="lazy"
+                  />
+                </MenuItem>
+                <MenuItem value={Lang.pl}>
+                  <img
+                      src={"/poland.png"}
+                      alt={Lang.pl}
+                      style={{ width: "2em", height: "2em" }}
+                      loading="lazy"
                   />
                 </MenuItem>
               </Select>
-            </Box>
           </Box>
     </Box>
   );

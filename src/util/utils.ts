@@ -2,7 +2,7 @@ import { Lang } from "../data/enums/Lang";
 
 export const changeBgc = (color: string) => {
   document.body.style.backgroundColor = color;
-  document.body.style.transition = "0.5s";
+  document.body.style.transition = "0.3s";
 };
 
 export const getInitLang = () => {

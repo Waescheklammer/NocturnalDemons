@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
 import { ContentText } from "../../../components/ContentText";
 import { useTranslation } from "react-i18next";
@@ -9,7 +9,9 @@ export const Imprint = () => {
   const { t, i18n } = useTranslation("imprint");
   const theme = useTheme();
 
-  changeBgc(theme.palette.secondary.main);
+  useEffect(() => {
+      matches ? changeBgc(theme.palette.primary.dark) : changeBgc(theme.palette.secondary.main)
+  }, [matches])
 
   return (
     <Box
