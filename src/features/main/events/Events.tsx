@@ -49,15 +49,19 @@ export const Events = () => {
           <Grid container>
             <Grid item xs={12}>
               <ContentText
-                variant={"h3"}
+                variant={matchesPhone ? "h2" : "h3"}
                 sx={{
                   mt: "1em",
                   borderTop: "2px solid " + fontColor,
                   borderBottom: "2px solid " + fontColor,
-                  color: fontColor,
+                  color: matchesPhone ? "primary.main" : fontColor,
                 }}
               >
-                {events.locationShort}
+                  {matchesPhone ? (
+                      <>{events.name}</>
+                  ) : (
+                      <>{events.locationShort}</>
+                  )}
               </ContentText>
             </Grid>
             <Grid item xs={12}>
@@ -73,6 +77,16 @@ export const Events = () => {
                 {"| " + events.genre + " |"}
               </ContentText>
             </Grid>
+            {matchesPhone && (
+                <Grid item xs={12}>
+                    <ContentText
+                        variant={"h6"}
+                        sx={{ mt: "2em", color: fontColor }}
+                    >
+                        {events.locationShort}
+                    </ContentText>
+                </Grid>
+            )}
             <Grid item xs={12}>
               <Box sx={{ width: "13em", mt: "6em", mx: "auto" }}>
                 <GlitchTypography>
