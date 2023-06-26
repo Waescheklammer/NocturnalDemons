@@ -1,13 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  Box,
-  Button,
-  Grid,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import React from "react";
+import { Box, Grid, useMediaQuery, useTheme, } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { GlitchTypography } from "../../../components/GlitchTypography";
 import { Link } from "react-router-dom";
@@ -36,7 +28,7 @@ export const Details = () => {
         minHeight: "86vh",
       }}
     >
-      <ScrollButton></ScrollButton>
+      {!matchesPhone && <ScrollButton></ScrollButton>}
       <Box sx={{ mb: "3em" }}>
         <img
           src={events.imgCover}
@@ -49,22 +41,25 @@ export const Details = () => {
           }}
         />
       </Box>
-      <Box sx={{ mb: "5em", maxWidth: '25em', mx: 'auto' }}>
-            <Link to={events.ticketLink}>
-              <GlitchTypography>
-                <ContentButton
-                    sx={{ fontWeight: "bolder", width: matchesPhone ? '15em' : '25em' }}
-                    size={"large"}
-                    variant={"outlined"}
-                >
-                  {(t("tickets"))}
-                </ContentButton>
-              </GlitchTypography>
-            </Link>
+      <Box sx={{ mb: "5em", maxWidth: "25em", mx: "auto" }}>
+        <Link to={events.ticketLink}>
+          <GlitchTypography>
+            <ContentButton
+              sx={{
+                fontWeight: "bolder",
+                width: matchesPhone ? "15em" : "25em",
+              }}
+              size={"large"}
+              variant={"outlined"}
+            >
+              {t("tickets")}
+            </ContentButton>
+          </GlitchTypography>
+        </Link>
       </Box>
       <Box
         sx={{
-          mx: matchesPhone ? "1.5em" : "5em",
+          mx: matchesPhone ? "1em" : "5em",
           mb: "3em",
           py: "2em",
           border: "1px solid white",
@@ -99,13 +94,13 @@ export const Details = () => {
             <ContentText variant={"subtitle2"} sx={{ mb: "3em" }}>
               {events.address}
             </ContentText>
-            <Box sx={{mb: '4em'}}>
+            <Box sx={{ mb: "4em" }}>
               <Link to={events.mapLink}>
                 <GlitchTypography>
                   <ContentButton
-                      sx={{ gap: "0.5em" }}
-                      size={"medium"}
-                      variant={"outlined"}
+                    sx={{ gap: "0.5em" }}
+                    size={"medium"}
+                    variant={"outlined"}
                   >
                     {t("map")}
                     <NearMeIcon></NearMeIcon>
@@ -125,7 +120,7 @@ export const Details = () => {
               <Box key={stage.name}>
                 <ContentText
                   variant={"h6"}
-                  sx={{ mb: "0.5em", mt: "0.5em", color: "primary.dark" }}
+                  sx={{ mb: "0.5em", mt: "0.5em", color: "#901317" }}
                 >
                   {stage.name} Floor
                 </ContentText>

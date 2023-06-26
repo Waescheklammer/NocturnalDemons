@@ -1,17 +1,19 @@
 import React, { useEffect } from "react";
-import { Box, styled, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { ContentText } from "../../../components/ContentText";
 import { useTranslation } from "react-i18next";
 import { changeBgc } from "../../../util/utils";
 
 export const Imprint = () => {
   const matches = useMediaQuery("(max-width:600px)");
-  const { t, i18n } = useTranslation("imprint");
+  const { t} = useTranslation("imprint");
   const theme = useTheme();
 
   useEffect(() => {
-      matches ? changeBgc(theme.palette.primary.dark) : changeBgc(theme.palette.secondary.main)
-  }, [matches])
+    matches
+      ? changeBgc(theme.palette.primary.dark)
+      : changeBgc(theme.palette.secondary.main);
+  }, [matches]);
 
   return (
     <Box

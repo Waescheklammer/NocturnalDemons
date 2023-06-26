@@ -21,8 +21,9 @@ i18n.use(initReactI18next).init({
     pl: plCommon,
   },
   detection: {
-    order: ['localStorage']
+    order: ["localStorage"],
   },
+  lng: localStorage.getItem("lng") || "de",
 });
 
 export default i18n;

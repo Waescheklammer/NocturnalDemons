@@ -1,18 +1,10 @@
 import React from "react";
-import {
-  Box,
-  Grid,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Grid, styled, Typography, useMediaQuery} from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { GlitchTypography } from "../../components/GlitchTypography";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { changeBgc } from "../../util/utils";
 
 const FooterLink = styled(Link)(({ theme }) => ({
   color: theme.palette.secondary.light,
@@ -27,7 +19,6 @@ const FooterLink = styled(Link)(({ theme }) => ({
 
 export const Footer = () => {
   const matches = useMediaQuery("(max-width:600px)");
-  const theme = useTheme();
   const { t } = useTranslation("footer");
 
   return (
@@ -67,10 +58,7 @@ export const Footer = () => {
           )}
         </Grid>
         <Grid item xs={12} md={8}>
-          <Grid
-            container
-            sx={{ color: "secondary.light" }}
-          >
+          <Grid container sx={{ color: "secondary.light" }}>
             <Grid item xs={12} md={6} sx={{ mx: "auto" }}>
               <Typography variant={"h5"}>{t("contact")}</Typography>
             </Grid>

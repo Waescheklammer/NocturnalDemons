@@ -1,7 +1,6 @@
-import { Box, Grid, styled, Typography, Link, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Grid, Link, styled, Typography, useMediaQuery, useTheme, } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import React, { useEffect, useState } from "react";
-import { GlitchTypography } from "../../components/GlitchTypography";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import i18n from "../../i18n";
@@ -31,7 +30,7 @@ export const Menu = () => {
     { title: "home", link: "" },
     { title: "event", link: "details" },
     { title: "tickets", link: "tickets" },
-    { title: "contact", link: "contact" },
+    { title: "info", link: "contact" },
     { title: "gallery", link: "gallery" },
     { title: "privacy", link: "privacy" },
     { title: "imprint", link: "imprint" },
@@ -62,21 +61,21 @@ export const Menu = () => {
   };
 
   const handleRouting = (itemLink: string) => {
-    if(itemLink === "imprint" || itemLink === "privacy") {
+    if (itemLink === "imprint" || itemLink === "privacy") {
       changeBgc(
-          matches ? theme.palette.primary.dark : theme.palette.secondary.main
+        matches ? theme.palette.primary.dark : theme.palette.secondary.main
       );
     }
-  }
+  };
 
   return (
     <Box
       sx={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: "secondary.main",
         zIndex: "2",
         transition: "margin-top 1s ease-in",
+        backgroundColor: "secondary.light",
       }}
     >
       <Grid>
@@ -88,6 +87,7 @@ export const Menu = () => {
             justifyContent: "flex-end",
             pr: "0.5em",
             pt: "0.8em",
+            backgroundColor: "secondary.main",
           }}
         >
           <img
@@ -103,22 +103,33 @@ export const Menu = () => {
               sx={{
                 textDecoration: "none",
                 textTransform: "uppercase",
-                color: "#090404",
+                color: "secondary.main",
+                display: "flex",
+                flexDirection: "row",
+                width: "100%",
                 "&:active": {
                   color: "secondary.light",
                 },
               }}
               onClick={() => handleRouting(item.link)}
             >
-              <GlitchTypography>
-                <Typography sx={{ fontWeight: "bold" }}>
-                  {t(item.title)}
-                </Typography>
-              </GlitchTypography>
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  flex: "3",
+                  textAlign: "left",
+                  pl: "3em",
+                }}
+              >
+                {t(item.title)}
+              </Typography>
+              <Typography sx={{ fontWeight: "bold", flex: "1" }}>
+                {">"}
+              </Typography>
             </Link>
           </MenuItem>
         ))}
-        <Grid item sx={{ py: "1em", backgroundColor: 'secondary.main' }}>
+        <Grid item sx={{ py: "1em", backgroundColor: "secondary.main" }}>
           <Link href={"https://facebook.com"}>
             <FacebookIcon
               sx={{ color: "white", width: "1.5em", height: "1.5em" }}
@@ -131,7 +142,15 @@ export const Menu = () => {
           </Link>
         </Grid>
         <Grid item>
-          <Grid container sx={{ justifyContent: "center", gap: "0.5em", backgroundColor: 'secondary.main', pb: '1em' }}>
+          <Grid
+            container
+            sx={{
+              justifyContent: "center",
+              gap: "0.5em",
+              backgroundColor: "secondary.main",
+              pb: "1em",
+            }}
+          >
             <img
               src={"/images/flags/deutschland.png"}
               alt={"Nocturnal Demons"}
@@ -147,18 +166,18 @@ export const Menu = () => {
               loading="lazy"
             />
             <img
-                src={"/images/flags/czech.png"}
-                alt={"Nocturnal Demons"}
-                style={{ width: "2em", height: "2em" }}
-                onClick={changeToCz}
-                loading="lazy"
+              src={"/images/flags/czech.png"}
+              alt={"Nocturnal Demons"}
+              style={{ width: "2em", height: "2em" }}
+              onClick={changeToCz}
+              loading="lazy"
             />
             <img
-                src={"/images/flags/poland.png"}
-                alt={"Nocturnal Demons"}
-                style={{ width: "2em", height: "2em" }}
-                onClick={changeToPl}
-                loading="lazy"
+              src={"/images/flags/poland.png"}
+              alt={"Nocturnal Demons"}
+              style={{ width: "2em", height: "2em" }}
+              onClick={changeToPl}
+              loading="lazy"
             />
           </Grid>
         </Grid>

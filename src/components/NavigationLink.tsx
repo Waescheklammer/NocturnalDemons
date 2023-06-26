@@ -16,12 +16,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
   },
 }));
 
-const blackPages = [
-    "/details",
-    "/imprint",
-    "/gallery",
-    "/privacy"
-]
+const blackPages = ["/details", "/imprint", "/gallery", "/privacy"];
 
 export const NavigationLink = ({
   title,
