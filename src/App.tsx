@@ -69,7 +69,7 @@ function App() {
                 <MenuIcon
                   sx={{
                     color:
-                      open || isDetails ? (isContact && !open ? "secondary.main" : "secondary.light") : "secondary.main",
+                      open || isDetails ? "secondary.light" : "secondary.main",
                     zIndex: "999",
                     position: "fixed",
                     width: "2em",

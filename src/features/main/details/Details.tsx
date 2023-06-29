@@ -31,7 +31,7 @@ export const Details = () => {
       {!matchesPhone && <ScrollButton></ScrollButton>}
       <Box sx={{ mb: "3em" }}>
         <img
-          src={events.imgCover}
+          src={matchesPhone ? events.imgPromo : events.imgCover}
           alt={"Nocturnal Demons"}
           style={{
             width: "100%",
@@ -69,7 +69,7 @@ export const Details = () => {
           <Grid item xs={12} md={6}>
             <ContentText
               variant={"h4"}
-              sx={{ mb: "0.5em", color: "primary.main" }}
+              sx={{ mb: "0.5em", color: !matchesPhone ? "primary.main" : "#883CC0" }}
             >
               {events.name}
             </ContentText>
@@ -84,7 +84,7 @@ export const Details = () => {
             </ContentText>
             <ContentText
               variant={"h4"}
-              sx={{ mb: "1em", color: "primary.main" }}
+              sx={{ mb: "1em", color: !matchesPhone ? "primary.main" : "#883CC0" }}
             >
               {t("location")}
             </ContentText>
@@ -112,7 +112,7 @@ export const Details = () => {
           <Grid item xs={12} md={6}>
             <ContentText
               variant={"h4"}
-              sx={{ mb: "0.5em", color: "primary.main" }}
+              sx={{ mb: "0.5em", color: !matchesPhone ? "primary.main" : "#883CC0" }}
             >
               {t("lineup")}
             </ContentText>
@@ -120,7 +120,7 @@ export const Details = () => {
               <Box key={stage.name}>
                 <ContentText
                   variant={"h6"}
-                  sx={{ mb: "0.5em", mt: "0.5em", color: "#901317" }}
+                  sx={{ mb: "0.5em", mt: "0.5em", color: !matchesPhone ? "#901317" : "#512D75" }}
                 >
                   {stage.name} Floor
                 </ContentText>
@@ -156,7 +156,7 @@ export const Details = () => {
           </Grid>
         </Grid>
       </Box>
-      <ContentText sx={{ color: "primary.main", mb: "2em" }} variant={"h4"}>
+      <ContentText sx={{ color: !matchesPhone ? "primary.main" : "#883CC0", mb: "2em" }} variant={"h4"}>
         {t("acts")}
       </ContentText>
       <Box>

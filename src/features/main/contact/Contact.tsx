@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { ContentText } from "../../../components/ContentText";
 import { useTranslation } from "react-i18next";
 
@@ -30,7 +30,7 @@ export const Contact = () => {
         ) : (
             <Grid item xs={12}>
                 <img
-                    src={"/images/logo/contactCover.png"}
+                    src={"/images/logo/contactCover.webp"}
                     alt={"Nocturnal Demons"}
                     style={{
                         width: "100%",
@@ -108,7 +108,8 @@ const leaders = [
     "Kosta",
     "Robin",
     "Matze",
-    "Nico"
+    "Nico",
+    "Justin"
 ]
 
 const members = [
@@ -116,13 +117,12 @@ const members = [
     "Krissy",
     "Nelly",
     "Emy",
-    "Justin",
     "Franka",
     "Caro",
     "Miro",
     "Susi",
     "Nadine",
-    "Nadine Freundin",
+    "Dani",
     "Kurt",
     "Pablo",
     "Klimke",

@@ -60,10 +60,9 @@ export const Footer = () => {
         <Grid item xs={12} md={8}>
           <Grid container sx={{ color: "secondary.light" }}>
             <Grid item xs={12} md={6} sx={{ mx: "auto" }}>
-              <Typography variant={"h5"} sx={{mb: '1em'}}>{t("contact")}</Typography>
-              <Typography variant={"subtitle1"}>gashi@gashimail.com</Typography>
-              <Typography variant={"subtitle1"}>robinius@gersdorf.com</Typography>
-
+              <Typography variant={"h5"} sx={{mb: matches ? '0.5em' : "1em", mt: matches ? "1em" : "0em"}}>{t("contact")}</Typography>
+              <Typography variant={"subtitle2"} sx={{mb: '0.5em'}}>gashi@gashimail.com</Typography>
+              <Typography variant={"subtitle2"} sx={{mb: '1em'}}>robinius@gersdorf.com</Typography>
             </Grid>
             <Grid item xs={12} md={6}>
               {!matches && (

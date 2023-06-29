@@ -6,6 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import i18n from "../../i18n";
 import { Lang } from "../../data/enums/Lang";
 import { changeBgc } from "../../util/utils";
+import { events } from "../../data/eventinfo/Event";
 
 const MenuItem = styled(Grid)(({ theme }) => ({
   paddingTop: "2em",
@@ -27,13 +28,13 @@ export const Menu = () => {
   );
 
   const items = [
-    { title: "home", link: "" },
-    { title: "event", link: "details" },
-    { title: "tickets", link: "tickets" },
-    { title: "info", link: "contact" },
-    { title: "gallery", link: "gallery" },
-    { title: "privacy", link: "privacy" },
-    { title: "imprint", link: "imprint" },
+    { title: "home", link: "/" },
+    { title: "event", link: "/details" },
+    { title: "tickets", link: events.ticketLink },
+    { title: "info", link: "/contact" },
+    { title: "gallery", link: "/gallery" },
+    { title: "privacy", link: "/privacy" },
+    { title: "imprint", link: "/imprint" },
   ];
 
   useEffect(() => {
@@ -99,7 +100,7 @@ export const Menu = () => {
         {items.map((item) => (
           <MenuItem item key={item.title}>
             <Link
-              href={"/" + item.link}
+              href={item.link}
               sx={{
                 textDecoration: "none",
                 textTransform: "uppercase",
