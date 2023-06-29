@@ -36,11 +36,16 @@ function App() {
   const [open, setOpen] = useState(false);
   const matches = useMediaQuery("(max-width:600px)");
   const [isDetails, setIsDetails] = useState(false);
+  const [isContact, setIsContact] = useState(false);
 
   useEffect(() => {
     setIsDetails(
       window.location.pathname.includes("/details") ||
         window.location.pathname.includes("/")
+    );
+
+    setIsContact(
+        window.location.pathname.includes("/contact")
     );
   }, [path]);
 
@@ -64,7 +69,7 @@ function App() {
                 <MenuIcon
                   sx={{
                     color:
-                      open || isDetails ? "secondary.light" : "secondary.main",
+                      open || isDetails ? (isContact && !open ? "secondary.main" : "secondary.light") : "secondary.main",
                     zIndex: "999",
                     position: "fixed",
                     width: "2em",

@@ -48,4 +48,14 @@ export const deCommon = {
     links: "Haftung für Links",
     validity: "Gültigkeit",
   },
+  contact: {
+    who: "Wer sind",
+    nocturnalDemons: "Nocturnal Demons",
+    paragraph1: "wurde 2022 durch die gemeinsame Leidenschaft zum Drum n Bass und Techno als Kollektiv von Freunden gegründet, um euch in unserer Region um Görlitz etwas frisches zu liefern, vor allem Neurofunk.",
+    paragraph3: "Unsere Mission ist es die DnB und Techno Szene zu stärken indem wir aufstrebenden internationalen DJs\n" +
+        "            aus der Tschechischen Republik und anderen Ländern, welche die Neurofunk Szene prägen, zu uns einladen.\n" +
+        "            Diese mixen wir mit lokalen DJs um unseren Gästen ein möglichst qualitatives und vielseitiges Line-Up, sowie den Künstlern eine Plattform in Deutschland bieten zu können.\n" +
+        "            Gemeinsam holen wir den Neurofunk über die Grenze und zurück nach Görlitz.",
+    team: "Unser Team"
+  }
 };

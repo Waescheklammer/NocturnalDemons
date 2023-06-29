@@ -1,40 +1,131 @@
 import React from "react";
-import { Grid, useMediaQuery } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { ContentText } from "../../../components/ContentText";
+import { useTranslation } from "react-i18next";
 
 export const Contact = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery("(max-width:900px)");
+  const { t } = useTranslation("contact");
+
   return (
     <Grid container>
-      <Grid item xs={12}>
-        <img
-          src={"/images/logo/nocturnalAbout.png"}
-          alt={"Nocturnal Demons"}
-          style={{
-            width: "100%",
-            height: matches ? "100vh" : "90vh",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        />
-      </Grid>
-      <Grid item xs={12} sx={{ height: "100vh", pt: "5em" }}>
-        <ContentText sx={{ color: "black" }} variant={"h4"}>
-          Worum geht es uns?
-        </ContentText>
+        {matches ? (
+            <Grid item xs={12} sx={{ minHeight: "100vh"}}>
+                <ContentText
+                    sx={{
+                        position: "absolute",
+                        textAlign: "center",
+                        width: "100%",
+                        top: "40%",
+                        fontWeight: "900",
+                        color: "primary.main"
+                    }}
+                    variant={"h2"}
+                >
+                    {t("who")}
+                    <br />
+                    {t("nocturnalDemons")}
+                </ContentText>
+            </Grid>
+        ) : (
+            <Grid item xs={12}>
+                <img
+                    src={"/images/logo/contactCover.png"}
+                    alt={"Nocturnal Demons"}
+                    style={{
+                        width: "100%",
+                        height: matches ? "100vh" : "90vh",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                    }}
+                />
+                <ContentText
+                    sx={{
+                        position: "absolute",
+                        textAlign: "center",
+                        width: "100%",
+                        top: "40%",
+                        fontWeight: "900",
+                    }}
+                    variant={"h1"}
+                >
+                    {t("who")}
+                    <br />
+                    {t("nocturnalDemons")}
+                </ContentText>
+            </Grid>
+        )}
+      <Grid item xs={12} sx={{ minHeight: "100vh", py: "5em" }}>
+        <Typography sx={{ mx: '20vw' }} variant={matches ? "subtitle1" : "h5"}>
+          <b>Nocturnal Demons</b> {t("paragraph1")}
+            <br /><br /><br/>
+            {t("paragraph3")}
+        </Typography>
       </Grid>
       <Grid
         item
         xs={12}
-        sx={{ backgroundColor: "secondary.main", height: "100vh", pt: "5em" }}
+        sx={{ backgroundColor: "secondary.main", minHeight: "100vh", py: "5em" }}
       >
-        <ContentText variant={"h4"}>Worum geht es uns?</ContentText>
+        <ContentText variant={"h4"} sx={{mb: '1em'}}>{t("team")}</ContentText>
+          <img
+              src={"/images/logo/logo.png"}
+              alt={"Nocturnal Demons"}
+              style={{ height: "10em" }}
+              loading="lazy"
+          />
+          <Grid container sx={{width: '70%', mx: 'auto'}}>
+              {leaders.map((leader) => (
+                  <Grid item xs={6} md={3} sx={{mt: '1em'}} key={leader}>
+                      <ContentText variant={"h5"} sx={{fontWeight: 'bold'}}>{leader}</ContentText>
+                  </Grid>
+              ))}
+              {members.map((member) => (
+                  <Grid item xs={6} md={3} sx={{mt: '1em'}} key={member}>
+                      <ContentText variant={"h5"}>{member}</ContentText>
+                  </Grid>
+              ))}
+          </Grid>
+
       </Grid>
-      <Grid item xs={12} sx={{ height: "100vh", pt: "5em" }}>
-        <ContentText sx={{ color: "black" }} variant={"h4"}>
+      <Grid item xs={12} sx={{ height: "60vh", pt: "5em" }}>
+        <ContentText sx={{ color: "black", mb: '2em' }} variant={"h4"}>
           Kontakt
         </ContentText>
+        <ContentText sx={{ color: "black", mb: '1em'}}>
+          gashi@gashimail.com
+        </ContentText>
+          <ContentText sx={{ color: "black"}}>
+              Robinius@gersdorf.com
+          </ContentText>
       </Grid>
     </Grid>
   );
 };
+
+const leaders = [
+    "Gashi",
+    "Kosta",
+    "Robin",
+    "Matze",
+    "Nico"
+]
+
+const members = [
+    "Luxn",
+    "Krissy",
+    "Nelly",
+    "Emy",
+    "Justin",
+    "Franka",
+    "Caro",
+    "Miro",
+    "Susi",
+    "Nadine",
+    "Nadine Freundin",
+    "Kurt",
+    "Pablo",
+    "Klimke",
+    "Olli",
+    "Alex"
+]

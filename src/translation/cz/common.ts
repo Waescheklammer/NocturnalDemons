@@ -48,4 +48,11 @@ export const czCommon = {
     links: "Haftung für Links",
     validity: "Gültigkeit",
   },
+  contact: {
+    who: "Kdo jsou",
+    nocturnalDemons: " Noční démoni",
+    paragraph1: "byla založena v roce 2022 společnou vášní pro drum n bass a techno jako kolektiv přátel, aby vám přinesla něco čerstvého v našem regionu kolem Görlitz, zejména neurofunk.",
+    paragraph3: "Naším posláním je posílit DnB a techno scénu pozváním nadějných zahraničních DJs z České republiky a dalších zemí, kteří formují neurofunkovou scénu. Mícháme je s místními DJs, abychom našim hostům nabídli co nejkvalitnější a nejrozmanitější line-up a zároveň platformu pro umělce v Německu. Společně přeneseme neurofunk přes hranice a zpět do Görlitz.",
+    team: "Náš tým"
+  }
 };
