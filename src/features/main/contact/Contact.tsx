@@ -56,7 +56,7 @@ export const Contact = () => {
             </Grid>
         )}
       <Grid item xs={12} sx={{ minHeight: "100vh", py: "5em" }}>
-        <Typography sx={{ mx: '20vw' }} variant={matches ? "subtitle1" : "h5"}>
+        <Typography sx={{ mx: matches ? '15vw' : "20vw" }} variant={matches ? "subtitle1" : "h5"}>
           <b>Nocturnal Demons</b> {t("paragraph1")}
             <br /><br /><br/>
             {t("paragraph3")}
@@ -77,7 +77,7 @@ export const Contact = () => {
           <Grid container sx={{width: '70%', mx: 'auto'}}>
               {leaders.map((leader) => (
                   <Grid item xs={6} md={3} sx={{mt: '1em'}} key={leader}>
-                      <ContentText variant={"h5"} sx={{fontWeight: 'bold'}}>{leader}</ContentText>
+                      <ContentText variant={"h5"} sx={{fontWeight: 'bold', color: 'primary.main'}}>{leader}</ContentText>
                   </Grid>
               ))}
               {members.map((member) => (
