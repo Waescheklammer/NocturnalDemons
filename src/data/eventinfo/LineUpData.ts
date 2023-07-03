@@ -7,7 +7,7 @@ export const lineUpData: LineUp = {
       name: "Neurofunk",
       acts: [
         {
-          name: "Keon",
+          name: "Aven",
           time: "22:00",
           genre: "Neurofunk DnB",
         },
@@ -37,7 +37,7 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
         {
-          name: "ENGINE",
+          name: "KEON",
           time: "04:00",
           genre: "Neurofunk DnB",
         },
@@ -47,7 +47,7 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
         {
-          name: "GUSCHN",
+          name: "Beanie on Rave",
           time: "06:00",
           genre: "Neurofunk DnB",
         },
@@ -57,7 +57,7 @@ export const lineUpData: LineUp = {
       name: "Techno",
       acts: [
         {
-          name: "PABLO",
+          name: "Pablo",
           time: "22:00",
           genre: "Techno",
         },
@@ -71,23 +71,48 @@ export const lineUpData: LineUp = {
           time: "04:00",
           genre: "Techno",
         },
+        {
+          name: "Bounty 3000",
+          time: "04:00",
+          genre: "Techno",
+        },
+        {
+          name: "Yana Albrecht",
+          time: "04:00",
+          genre: "Techno",
+        },
+        {
+          name: "DO NOT DISTURB",
+          time: "04:00",
+          genre: "Techno",
+        },
       ],
     },
     {
       name: "Chill",
       acts: [
         {
-          name: "Restless-Ghost",
+          name: "DO:IT",
           time: "22:00",
           genre: "Keine Ahnung",
         },
         {
-          name: "Goldje",
+          name: "DYS.KO",
           time: "00:00",
           genre: "Keine Ahnung",
         },
         {
-          name: "Monomood",
+          name: "AUBI",
+          time: "02:00",
+          genre: "Minimal Techno",
+        },
+        {
+          name: "J-COP",
+          time: "02:00",
+          genre: "Minimal Techno",
+        },
+        {
+          name: "WILLIAM",
           time: "02:00",
           genre: "Minimal Techno",
         },

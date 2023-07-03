@@ -55,7 +55,7 @@ export const deCommon = {
     paragraph3: "Unsere Mission ist es die DnB und Techno Szene zu stärken indem wir aufstrebenden internationalen DJs\n" +
         "            aus der Tschechischen Republik und anderen Ländern, welche die Neurofunk Szene prägen, zu uns einladen.\n" +
         "            Diese mixen wir mit lokalen DJs um unseren Gästen ein möglichst qualitatives und vielseitiges Line-Up, sowie den Künstlern eine Plattform in Deutschland bieten zu können.\n" +
-        "            Gemeinsam holen wir den Neurofunk über die Grenze und zurück nach Görlitz.",
+        "            Gemeinsam holen wir den Neurofunk über die Grenze und nach Görlitz.",
     team: "Unser Team"
   }
 };

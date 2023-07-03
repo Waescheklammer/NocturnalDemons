@@ -10,7 +10,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "i18next";
 import "./i18n";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useReactPath } from "./hooks/ReactPath";
+import { useReactPath } from "./hooks/useReactPath";
 
 const theme = createTheme({
   palette: {
@@ -36,16 +36,12 @@ function App() {
   const [open, setOpen] = useState(false);
   const matches = useMediaQuery("(max-width:600px)");
   const [isDetails, setIsDetails] = useState(false);
-  const [isContact, setIsContact] = useState(false);
 
   useEffect(() => {
     setIsDetails(
       window.location.pathname.includes("/details") ||
-        window.location.pathname.includes("/")
-    );
-
-    setIsContact(
-        window.location.pathname.includes("/contact")
+        window.location.pathname.includes("/") ||
+        window.location.pathname.includes("/gallery")
     );
   }, [path]);
 
@@ -68,8 +64,7 @@ function App() {
               >
                 <MenuIcon
                   sx={{
-                    color:
-                      open || isDetails ? "secondary.light" : "secondary.main",
+                    color: open || isDetails ? "secondary.light" : "secondary.main",
                     zIndex: "999",
                     position: "fixed",
                     width: "2em",

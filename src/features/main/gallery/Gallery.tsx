@@ -9,16 +9,12 @@ import MasonryImageList from "../../../components/MasonryImageList";
 export const Gallery = () => {
   const theme = useTheme();
   const matches = useMediaQuery("(max-width:1000px)");
-  const [imgSelection, setImgSelection] = useState(itemData);
+  const [imgSelection, setImgSelection] = useState(imgData);
 
   changeBgc(theme.palette.secondary.main);
 
   const handleClick = () => {
     setImgSelection(imgData);
-  };
-
-  const handleClicko = () => {
-    setImgSelection(itemData);
   };
 
   return (
@@ -35,7 +31,7 @@ export const Gallery = () => {
             <ContentText variant={"h6"} sx={{ mb: "1em" }}>
               Events
             </ContentText>
-            <ContentText onClick={handleClicko}>
+            <ContentText onClick={handleClick}>
               <GlitchTypography
                 sx={{
                   "&:hover": { color: "primary.main", cursor: "pointer" },
@@ -46,7 +42,7 @@ export const Gallery = () => {
                 Kühlhaus 03.23
               </GlitchTypography>
             </ContentText>
-            <ContentText onClick={handleClick}>
+            <ContentText>
               <GlitchTypography
                 sx={{ "&:hover": { color: "grey" }, color: "grey" }}
                 component={"span"}
@@ -57,25 +53,145 @@ export const Gallery = () => {
           </Box>
         </Grid>
         <Grid item md={10} xs={12}>
-          <MasonryImageList imgData={imgSelection}></MasonryImageList>
+          <MasonryImageList imgData={shuffleArray(imgSelection)}></MasonryImageList>
         </Grid>
       </Grid>
     </>
   );
 };
 
+const shuffleArray = (array: {img: string, title: string}[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array
+}
+
+
 const imgData = [
   {
-    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
+    img: "/images/gallery/_DSC3810.jpg",
     title: "Bed",
   },
   {
-    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    img: "/images/gallery/_DSC3830.jpg",
     title: "Books",
   },
   {
-    img: "/nostromo3.jpg",
+    img: "/images/gallery/_DSC4183.jpg",
+    title: "Books",
+  },
+  {
+    img: "/images/gallery/_DSC3845-2.jpg",
+    title: "Books",
+  },
+  {
+    img: "/images/gallery/_DSC4176.jpg",
+    title: "Books",
+  },
+
+  {
+    img: "/images/gallery/_DSC4214.jpg",
     title: "Nostromo",
+  },
+  {
+    img: "/images/gallery/_DSC4216.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4425-2.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4260.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4274.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4293.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4489.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4541.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4914.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC4959.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5045.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5097.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5150.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5161.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5209.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5230.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5266.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5294.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5412.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5396-2.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5423.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5555.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5557.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5607.jpg",
+    title: "Bed",
+  },
+  {
+    img: "/images/gallery/_DSC5610.jpg",
+    title: "Bed",
   },
 ];
 
