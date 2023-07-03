@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, useMediaQuery } from "@mui/material";
+import { Grid, styled, Typography, useMediaQuery } from "@mui/material";
 import { ContentText } from "../../../components/ContentText";
 import { useTranslation } from "react-i18next";
 
@@ -92,12 +92,16 @@ export const Contact = () => {
         <ContentText sx={{ color: "black", mb: '2em' }} variant={"h4"}>
           Kontakt
         </ContentText>
-        <ContentText sx={{ color: "black", mb: '1em'}}>
-          gashi@gashimail.com
-        </ContentText>
-          <ContentText sx={{ color: "black"}}>
-              Robinius@gersdorf.com
-          </ContentText>
+        <Typography sx={{ mb: '1em'}}>
+          <a href={"mailto:nocturnaldemons444@gmail.com"} style={{color: "black", textDecoration: "none"}}>
+              nocturnaldemons444@gmail.com
+          </a>
+        </Typography>
+        <Typography>
+          <a href={"mailto:robin.nocturnaldemons@gmail.com"} style={{color: "black", textDecoration: "none"}}>
+              robin.nocturnaldemons@gmail.com
+          </a>
+        </Typography>
       </Grid>
     </Grid>
   );

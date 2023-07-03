@@ -34,7 +34,8 @@ export const Gallery = () => {
             <ContentText onClick={handleClick}>
               <GlitchTypography
                 sx={{
-                  "&:hover": { color: "primary.main", cursor: "pointer" },
+                  color: "primary.light",
+                  "&:hover": { color: "primary.dark", cursor: "pointer" },
                   mb: "1em",
                 }}
                 component={"span"}

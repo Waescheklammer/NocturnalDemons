@@ -61,8 +61,11 @@ export const Footer = () => {
           <Grid container sx={{ color: "secondary.light" }}>
             <Grid item xs={12} md={6} sx={{ mx: "auto" }}>
               <Typography variant={"h5"} sx={{mb: matches ? '0.5em' : "1em", mt: matches ? "1em" : "0em"}}>{t("contact")}</Typography>
-              <Typography variant={"subtitle2"} sx={{mb: '0.5em'}}>gashi@gashimail.com</Typography>
-              <Typography variant={"subtitle2"} sx={{mb: '1em'}}>robinius@gersdorf.com</Typography>
+              <Typography variant={"subtitle2"} sx={{mb: '0.5em'}}>
+                <a href={"mailto:nocturnaldemons444@gmail.com"} style={{color: "white", textDecoration: "none"}}>
+                  nocturnaldemons444@gmail.com
+                </a>
+              </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
               {!matches && (
