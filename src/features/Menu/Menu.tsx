@@ -94,7 +94,7 @@ export const Menu = () => {
           <img
             src={"/images/logo/textless.png"}
             alt={"Nocturnal Demons Head"}
-            style={{ width: "5em", height: "3em" }}
+            style={{ width: "4em", height: "3em" }}
           />
         </Grid>
         {items.map((item) => (

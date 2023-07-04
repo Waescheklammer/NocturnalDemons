@@ -30,16 +30,32 @@ export const Details = () => {
     >
       {!matchesPhone && <ScrollButton></ScrollButton>}
       <Box sx={{ mb: "3em" }}>
-        <img
-          src={matchesPhone ? events.imgPromo : events.imgCover}
-          alt={"Nocturnal Demons"}
-          style={{
-            width: "100%",
-            height: matchesPhone ? "100vh" : matchesTablet ? "94vh" : "80vh",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        />
+        {matchesPhone ? (
+            <img
+                src={events.imgPromo}
+                alt={"Nocturnal Demons"}
+                style={{
+                  width: "100%",
+                  height: "70vh",
+                  marginTop: "15vh",
+                  marginBottom: "15vh",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+            />
+        ) : (
+            <img
+                src={events.imgCover}
+                alt={"Nocturnal Demons"}
+                style={{
+                  width: "100%",
+                  height: matchesTablet ? "94vh" : "80vh",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+            />
+        )}
+
       </Box>
       <Box sx={{ mb: "5em", maxWidth: "25em", mx: "auto" }}>
         <Link to={events.ticketLink}>

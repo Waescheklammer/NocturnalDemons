@@ -21,9 +21,11 @@ const blackPages = ["/details", "/imprint", "/gallery", "/privacy"];
 export const NavigationLink = ({
   title,
   link,
+  sx,
 }: {
   title: string;
   link: string;
+  sx?: any
 }) => {
   const theme = useTheme();
   const { t } = useTranslation("links");
@@ -43,6 +45,7 @@ export const NavigationLink = ({
   return (
     <Box
       sx={{
+        ...sx,
         "&:hover": {
           cursor: "pointer",
         },

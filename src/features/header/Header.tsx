@@ -18,6 +18,7 @@ export const Header = () => {
     localStorage.getItem("lng") || Lang.de
   );
   const matches = useMediaQuery("(max-width:1000px)");
+  const matchesPhone = useMediaQuery("(max-width:800px)");
 
   useEffect(() => {
     setIsDetails(location.pathname === "/details");
@@ -85,7 +86,7 @@ export const Header = () => {
               my: "auto",
             }}
           >
-            <NavigationLink title={t("gallery")} link={"/gallery"} />
+            <NavigationLink title={t("gallery")} link={"/gallery"} sx={{ml: matchesPhone ? "2em" : "0em" }}/>
             <NavigationLink title={t("info")} link={"/contact"} />
             {!matches && (
               <img

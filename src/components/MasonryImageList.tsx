@@ -1,10 +1,10 @@
 import * as React from "react";
+import { useCallback, useState } from "react";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { useMediaQuery } from "@mui/material";
 import ImageViewer from "react-simple-image-viewer";
-import { useState, useCallback } from "react";
 
 interface MasonryImageListProps {
   imgData: { img: string; title: string }[];
@@ -39,7 +39,6 @@ export default function MasonryImageList({ imgData }: MasonryImageListProps) {
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               onClick={() => openImageViewer(index)}
-              loading="lazy"
             />
           </ImageListItem>
         ))}

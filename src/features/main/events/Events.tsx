@@ -29,7 +29,7 @@ export const Events = () => {
             <img
               src={events.imgPromo}
               alt={"Nocturnal Demons"}
-              style={{ width: "100%", height: matchesPhone ? "100vh" : "80vh" }}
+              style={{ width: "100%", height: "100%", minHeight: "80vh"}}
             />
           </Grid>
         ) : (
