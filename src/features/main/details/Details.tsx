@@ -132,7 +132,8 @@ export const Details = () => {
             >
               {t("lineup")}
             </ContentText>
-            {lineUpData.stages.map((stage) => (
+            <ContentText variant={"h4"}>TBA</ContentText>
+            {/*lineUpData.stages.map((stage) => (
               <Box key={stage.name}>
                 <ContentText
                   variant={"h6"}
@@ -168,7 +169,7 @@ export const Details = () => {
                   </Grid>
                 ))}
               </Box>
-            ))}
+            ))*/}
           </Grid>
         </Grid>
       </Box>
@@ -180,7 +181,8 @@ export const Details = () => {
           container
           sx={{ justifyContent: "center", gap: "2em", mb: "5em" }}
         >
-          {acts.map((a) => (
+          <ContentText variant={"h4"}>TBA</ContentText>
+          {/*acts.map((a) => (
             <Grid item xs={6} md={3} key={a.name}>
               <img
                 src={events.imgCover}
@@ -193,7 +195,7 @@ export const Details = () => {
                 {a.nationality} {a.city}
               </ContentText>
             </Grid>
-          ))}
+          ))*/}
         </Grid>
       </Box>
     </Box>

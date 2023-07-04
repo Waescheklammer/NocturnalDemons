@@ -48,6 +48,9 @@ export const plCommon = {
     links: "Haftung für Links",
     validity: "Gültigkeit",
   },
+  privacy: {
+    title: "Polityka prywatności",
+  },
   contact: {
     who: "Kim są",
     nocturnalDemons: "Nocturnal Demons",

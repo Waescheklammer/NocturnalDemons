@@ -97,11 +97,6 @@ export const Contact = () => {
               nocturnaldemons444@gmail.com
           </a>
         </Typography>
-        <Typography>
-          <a href={"mailto:robin.nocturnaldemons@gmail.com"} style={{color: "black", textDecoration: "none"}}>
-              robin.nocturnaldemons@gmail.com
-          </a>
-        </Typography>
       </Grid>
     </Grid>
   );

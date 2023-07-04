@@ -48,6 +48,9 @@ export const czCommon = {
     links: "Haftung für Links",
     validity: "Gültigkeit",
   },
+  privacy: {
+    title: "Zásady ochrany osobních údajů"
+  },
   contact: {
     who: "Kdo jsou",
     nocturnalDemons: " Noční démoni",

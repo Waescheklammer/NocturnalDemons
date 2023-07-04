@@ -48,6 +48,9 @@ export const enCommon = {
     links: "Haftung für Links",
     validity: "Gültigkeit",
   },
+  privacy: {
+    title: "Privacy Statement",
+  },
   contact: {
     who: "Who are",
     nocturnalDemons: "Nocturnal Demons",

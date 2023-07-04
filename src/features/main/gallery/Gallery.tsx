@@ -31,7 +31,7 @@ export const Gallery = () => {
             <ContentText variant={"h6"} sx={{ mb: "1em" }}>
               Events
             </ContentText>
-            <ContentText onClick={handleClick}>
+            <ContentText onClick={handleClick} sx={{textAlign: "left"}}>
               <GlitchTypography
                 sx={{
                   color: "primary.light",
@@ -43,17 +43,17 @@ export const Gallery = () => {
                 Kühlhaus 03.23
               </GlitchTypography>
             </ContentText>
-            <ContentText>
+            <ContentText sx={{textAlign: "left"}}>
               <GlitchTypography
                 sx={{ "&:hover": { color: "grey" }, color: "grey" }}
                 component={"span"}
               >
-                Nostromo 09.23
+                ABYSS 09.23
               </GlitchTypography>
             </ContentText>
           </Box>
         </Grid>
-        <Grid item md={10} xs={12}>
+        <Grid item md={10} xs={12} >
           <MasonryImageList imgData={shuffleArray(imgSelection)}></MasonryImageList>
         </Grid>
       </Grid>

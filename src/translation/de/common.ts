@@ -48,6 +48,9 @@ export const deCommon = {
     links: "Haftung für Links",
     validity: "Gültigkeit",
   },
+  privacy: {
+    title: "Datenschutzerklärung",
+  },
   contact: {
     who: "Wer sind",
     nocturnalDemons: "Nocturnal Demons",
