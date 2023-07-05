@@ -33,6 +33,7 @@ export const ScrollButton = () => {
     <Box
       sx={{
         position: "fixed",
+        zIndex: "9999",
         mt: "70vh",
         ml: matches ? "80vw" : "87vw",
         display: showButton ? "block" : "none",

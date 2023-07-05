@@ -56,7 +56,14 @@ export const Contact = () => {
           </ContentText>
         </Grid>
       )}
-      <Grid item xs={12} sx={{ minHeight: matchesBig ? "60vh" : "100vh", py:  matchesBig ? "10em" : "5em" }}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          minHeight: matchesBig ? "60vh" : "100vh",
+          py: matchesBig ? "10em" : "5em",
+        }}
+      >
         <Typography
           sx={{ mx: matches ? "15vw" : "20vw" }}
           variant={matches ? "subtitle1" : "h5"}

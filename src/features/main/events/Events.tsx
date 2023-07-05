@@ -50,9 +50,9 @@ export const Events = () => {
           <Grid container>
             <Grid item xs={12}>
               <ContentText
-                variant={matchesPhone ? "h2" : (matchesBig ? "h2": "h3")}
+                variant={matchesPhone ? "h2" : matchesBig ? "h2" : "h3"}
                 sx={{
-                  mt: matchesBig ? "4em": "1em",
+                  mt: matchesBig ? "4em" : "1em",
                   borderTop: "2px solid " + fontColor,
                   borderBottom: "2px solid " + fontColor,
                   color: matchesPhone ? "primary.main" : fontColor,
@@ -66,7 +66,10 @@ export const Events = () => {
               </ContentText>
             </Grid>
             <Grid item xs={12}>
-              <ContentText variant={matchesBig ? "h2": "h3"} sx={{ mt: "1em", color: fontColor }}>
+              <ContentText
+                variant={matchesBig ? "h2" : "h3"}
+                sx={{ mt: "1em", color: fontColor }}
+              >
                 {events.date}
               </ContentText>
             </Grid>
@@ -99,7 +102,7 @@ export const Events = () => {
                           ? "2px solid" + fontColor
                           : "1px solid" + fontColor,
                       }}
-                      size={matchesBig ? "large": "medium"}
+                      size={matchesBig ? "large" : "medium"}
                       variant={"outlined"}
                     >
                       {t("tickets")}
@@ -109,7 +112,14 @@ export const Events = () => {
               </Box>
             </Grid>
             <Grid item xs={12}>
-              <Box sx={{ width: "13em", mx: "auto", mt: matchesBig ? "2em": "1em", mb: "4em" }}>
+              <Box
+                sx={{
+                  width: "13em",
+                  mx: "auto",
+                  mt: matchesBig ? "2em" : "1em",
+                  mb: "4em",
+                }}
+              >
                 <GlitchTypography>
                   <RouterLink to={"details"}>
                     <ContentButton
@@ -119,7 +129,7 @@ export const Events = () => {
                           ? "2px solid" + fontColor
                           : "1px solid" + fontColor,
                       }}
-                      size={matchesBig ? "large": "medium"}
+                      size={matchesBig ? "large" : "medium"}
                       variant={"outlined"}
                     >
                       {t("info")}

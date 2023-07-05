@@ -80,7 +80,14 @@ export const Header = () => {
               <img
                 src={"/images/logo/text.png"}
                 alt={"Nocturnal Demons"}
-                style={{ width: !matchesMedium ? (matchesBig ? "15em" : "10em") : "8em", height: "5em" }}
+                style={{
+                  width: !matchesMedium
+                    ? matchesBig
+                      ? "15em"
+                      : "10em"
+                    : "8em",
+                  height: "5em",
+                }}
               />
             </Link>
           </Grid>
