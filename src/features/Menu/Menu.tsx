@@ -1,4 +1,12 @@
-import { Box, Grid, Link, styled, Typography, useMediaQuery, useTheme, } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Link,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { useTranslation } from "react-i18next";
 import React, { useEffect, useState } from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -131,7 +139,11 @@ export const Menu = () => {
           </MenuItem>
         ))}
         <Grid item sx={{ py: "1em", backgroundColor: "secondary.main" }}>
-          <Link href={"https://facebook.com"}>
+          <Link
+            href={
+              "https://www.facebook.com/nocturnal.demons.events?locale=de_DE"
+            }
+          >
             <FacebookIcon
               sx={{ color: "white", width: "1.5em", height: "1.5em" }}
             ></FacebookIcon>

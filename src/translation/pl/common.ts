@@ -54,8 +54,10 @@ export const plCommon = {
   contact: {
     who: "Kim są",
     nocturnalDemons: "Nocturnal Demons",
-    paragraph1: "został założony w 2022 roku przez wspólną pasję do Drum n Bass i Techno jako kolektyw przyjaciół, aby zapewnić coś świeżego w naszym regionie wokół Görlitz, zwłaszcza Neurofunk.",
-    paragraph3: "Naszą misją jest wzmocnienie sceny DnB i techno poprzez zapraszanie wschodzących międzynarodowych DJ-ów z Czech i innych krajów, którzy kształtują scenę neurofunk. Łączymy ich z lokalnymi DJ-ami, aby zaoferować naszym gościom skład, który jest tak jakościowy i różnorodny, jak to tylko możliwe, a także platformę dla artystów w Niemczech. Razem przeniesiemy neurofunk przez granicę do Görlitz.",
-    team: "Nasz zespół"
-  }
+    paragraph1:
+      "został założony w 2022 roku przez wspólną pasję do Drum n Bass i Techno jako kolektyw przyjaciół, aby zapewnić coś świeżego w naszym regionie wokół Görlitz, zwłaszcza Neurofunk.",
+    paragraph3:
+      "Naszą misją jest wzmocnienie sceny DnB i techno poprzez zapraszanie wschodzących międzynarodowych DJ-ów z Czech i innych krajów, którzy kształtują scenę neurofunk. Łączymy ich z lokalnymi DJ-ami, aby zaoferować naszym gościom skład, który jest tak jakościowy i różnorodny, jak to tylko możliwe, a także platformę dla artystów w Niemczech. Razem przeniesiemy neurofunk przez granicę do Görlitz.",
+    team: "Nasz zespół",
+  },
 };

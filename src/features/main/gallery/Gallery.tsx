@@ -2,19 +2,23 @@ import React, { useState } from "react";
 import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
 import { changeBgc } from "../../../util/utils";
 import { ContentText } from "../../../components/ContentText";
-import { GlitchTypography } from "../../../components/GlitchTypography";
 import { ScrollButton } from "../../../components/ScrollButton";
 import MasonryImageList from "../../../components/MasonryImageList";
 
 export const Gallery = () => {
   const theme = useTheme();
   const matches = useMediaQuery("(max-width:1000px)");
+  const [eventSelected, setEventSelected] = useState("KÜHLHAUS");
   const [imgSelection, setImgSelection] = useState(imgData);
 
   changeBgc(theme.palette.secondary.main);
 
-  const handleClick = () => {
-    setImgSelection(imgData);
+  const handleClick = (
+    data: { img: string; title: string }[],
+    title: string
+  ) => {
+    setImgSelection(data);
+    setEventSelected(title);
   };
 
   return (
@@ -31,46 +35,66 @@ export const Gallery = () => {
             <ContentText variant={"h6"} sx={{ mb: "1em" }}>
               Events
             </ContentText>
-            <ContentText onClick={handleClick} sx={{textAlign: "left"}}>
-              <GlitchTypography
-                sx={{
-                  color: "primary.light",
-                  "&:hover": { color: "primary.dark", cursor: "pointer" },
-                  mb: "1em",
-                }}
-                component={"span"}
-              >
-                Kühlhaus 03.23
-              </GlitchTypography>
-            </ContentText>
-            <ContentText sx={{textAlign: "left"}}>
-              <GlitchTypography
-                sx={{ "&:hover": { color: "grey" }, color: "grey" }}
-                component={"span"}
-              >
-                ABYSS 09.23
-              </GlitchTypography>
-            </ContentText>
+            {eventList.map((event) => (
+              <Box key={event.title} sx={{ mb: "0.3em" }}>
+                <ContentText
+                  onClick={
+                    event.disabled || event.data === undefined
+                      ? undefined
+                      : () => handleClick(event.data, event.title)
+                  }
+                >
+                  <Grid
+                    container
+                    spacing={3}
+                    component={"span"}
+                    sx={{
+                      color: event.disabled
+                        ? "grey"
+                        : eventSelected === event.title
+                        ? "primary.main"
+                        : "secondary.light",
+                      "&:hover": {
+                        color: event.disabled ? "grey" : "primary.main",
+                        cursor: event.disabled ? "default" : "pointer",
+                      },
+                    }}
+                  >
+                    <Grid
+                      item
+                      sx={{ textAlign: "left", minWidth: "6em" }}
+                      component={"span"}
+                    >
+                      {event.title}
+                    </Grid>
+                    <Grid item component={"span"}>
+                      {event.date}
+                    </Grid>
+                  </Grid>
+                </ContentText>
+              </Box>
+            ))}
           </Box>
         </Grid>
-        <Grid item md={10} xs={12} >
-          <MasonryImageList imgData={shuffleArray(imgSelection)}></MasonryImageList>
+        <Grid item md={10} xs={12}>
+          <MasonryImageList
+            imgData={shuffleArray(imgSelection)}
+          ></MasonryImageList>
         </Grid>
       </Grid>
     </>
   );
 };
 
-const shuffleArray = (array: {img: string, title: string}[]) => {
+const shuffleArray = (array: { img: string; title: string }[]) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     const temp = array[i];
     array[i] = array[j];
     array[j] = temp;
   }
-  return array
-}
-
+  return array;
+};
 
 const imgData = [
   {
@@ -196,53 +220,17 @@ const imgData = [
   },
 ];
 
-const itemData = [
+const eventList = [
   {
-    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
-    title: "Bed",
+    title: "KÜHLHAUS",
+    date: "03.23",
+    data: imgData,
+    disabled: false,
   },
   {
-    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
-    title: "Books",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
-    title: "Sink",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-    title: "Kitchen",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1588436706487-9d55d73a39e3",
-    title: "Blinds",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1574180045827-681f8a1a9622",
-    title: "Chairs",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1530731141654-5993c3016c77",
-    title: "Laptop",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
-    title: "Doors",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7",
-    title: "Coffee",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee",
-    title: "Storage",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62",
-    title: "Candle",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
-    title: "Coffee table",
+    title: "ABYSS",
+    date: "09.23",
+    data: undefined,
+    disabled: true,
   },
 ];

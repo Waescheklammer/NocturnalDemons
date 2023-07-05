@@ -1,4 +1,12 @@
-import { Box, Grid, MenuItem, SelectChangeEvent, Toolbar, useMediaQuery, useTheme, } from "@mui/material";
+import {
+  Box,
+  Grid,
+  MenuItem,
+  SelectChangeEvent,
+  Toolbar,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { NavigationLink } from "../../components/NavigationLink";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -17,8 +25,9 @@ export const Header = () => {
   const [lang, setLang] = useState<string>(
     localStorage.getItem("lng") || Lang.de
   );
-  const matches = useMediaQuery("(max-width:1000px)");
+  const matchesMedium = useMediaQuery("(max-width:1000px)");
   const matchesPhone = useMediaQuery("(max-width:800px)");
+  const matchesBig = useMediaQuery("(min-width:1500px)");
 
   useEffect(() => {
     setIsDetails(location.pathname === "/details");
@@ -49,11 +58,11 @@ export const Header = () => {
               my: "auto",
             }}
           >
-            {!matches && (
+            {!matchesMedium && (
               <img
                 src={"/images/logo/leftHand.png"}
                 alt={"Nocturnal Demons"}
-                style={{ width: "2em", height: "2em" }}
+                style={{ width: "3em", height: "3em" }}
               />
             )}
             {isDetails ? (
@@ -71,7 +80,7 @@ export const Header = () => {
               <img
                 src={"/images/logo/text.png"}
                 alt={"Nocturnal Demons"}
-                style={{ width: !matches ? "10em" : "8em", height: "5em" }}
+                style={{ width: !matchesMedium ? (matchesBig ? "15em" : "10em") : "8em", height: "5em" }}
               />
             </Link>
           </Grid>
@@ -86,13 +95,17 @@ export const Header = () => {
               my: "auto",
             }}
           >
-            <NavigationLink title={t("gallery")} link={"/gallery"} sx={{ml: matchesPhone ? "2em" : "0em" }}/>
+            <NavigationLink
+              title={t("gallery")}
+              link={"/gallery"}
+              sx={{ ml: matchesPhone ? "2em" : "0em" }}
+            />
             <NavigationLink title={t("info")} link={"/contact"} />
-            {!matches && (
+            {!matchesMedium && (
               <img
                 src={"/images/logo/rightHand.png"}
                 alt={"Nocturnal Demons"}
-                style={{ width: "2em", height: "2em" }}
+                style={{ width: "3em", height: "3em" }}
               />
             )}
           </Grid>

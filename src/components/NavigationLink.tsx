@@ -25,7 +25,7 @@ export const NavigationLink = ({
 }: {
   title: string;
   link: string;
-  sx?: any
+  sx?: any;
 }) => {
   const theme = useTheme();
   const { t } = useTranslation("links");

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, styled, Typography, useMediaQuery} from "@mui/material";
+import { Box, Grid, styled, Typography, useMediaQuery } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { GlitchTypography } from "../../components/GlitchTypography";
@@ -33,7 +33,7 @@ export const Footer = () => {
     >
       <Grid container>
         <Grid item xs={12} md={12}>
-          <FooterLink to="https://facebook.com">
+          <FooterLink to="https://www.facebook.com/nocturnal.demons.events?locale=de_DE">
             <FacebookIcon />
           </FooterLink>
           <FooterLink to="https://www.instagram.com/nocturnal.demons/">
@@ -60,12 +60,23 @@ export const Footer = () => {
         <Grid item xs={12} md={8}>
           <Grid container sx={{ color: "secondary.light" }}>
             <Grid item xs={12} md={6} sx={{ mx: "auto" }}>
-              <Typography variant={"h5"} sx={{mb: matches ? '0.5em' : "1em", mt: matches ? "1em" : "0em"}}>{t("contact")}</Typography>
-              <Typography variant={"subtitle2"} sx={{mb: '0.5em'}}>
+              <Typography
+                variant={"h5"}
+                sx={{
+                  mb: matches ? "0.5em" : "1em",
+                  mt: matches ? "1em" : "0em",
+                }}
+              >
+                {t("contact")}
+              </Typography>
+              <Typography variant={"subtitle2"} sx={{ mb: "0.5em" }}>
                 Leon Gashi
               </Typography>
-              <Typography variant={"subtitle2"} sx={{mb: '1em'}}>
-                <a href={"mailto:nocturnaldemons444@gmail.com"} style={{color: "white", textDecoration: "none"}}>
+              <Typography variant={"subtitle2"} sx={{ mb: "1em" }}>
+                <a
+                  href={"mailto:nocturnaldemons444@gmail.com"}
+                  style={{ color: "white", textDecoration: "none" }}
+                >
                   nocturnaldemons444@gmail.com
                 </a>
               </Typography>

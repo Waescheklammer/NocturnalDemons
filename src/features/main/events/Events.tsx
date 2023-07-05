@@ -11,6 +11,7 @@ export const Events = () => {
   const { t } = useTranslation("events");
   const matchesPhone = useMediaQuery("(max-width:600px)");
   const matchesTablet = useMediaQuery("(max-width:810px)");
+  const matchesBig = useMediaQuery("(min-width:1500px)");
   const fontColor = "secondary.light";
 
   return (
@@ -29,7 +30,7 @@ export const Events = () => {
             <img
               src={events.imgPromo}
               alt={"Nocturnal Demons"}
-              style={{ width: "100%", height: "100%", minHeight: "80vh"}}
+              style={{ width: "100%", height: "100%", minHeight: "80vh" }}
             />
           </Grid>
         ) : (
@@ -49,23 +50,23 @@ export const Events = () => {
           <Grid container>
             <Grid item xs={12}>
               <ContentText
-                variant={matchesPhone ? "h2" : "h3"}
+                variant={matchesPhone ? "h2" : (matchesBig ? "h2": "h3")}
                 sx={{
-                  mt: "1em",
+                  mt: matchesBig ? "4em": "1em",
                   borderTop: "2px solid " + fontColor,
                   borderBottom: "2px solid " + fontColor,
                   color: matchesPhone ? "primary.main" : fontColor,
                 }}
               >
-                  {matchesPhone ? (
-                      <>{events.name}</>
-                  ) : (
-                      <>{events.locationShort}</>
-                  )}
+                {matchesPhone ? (
+                  <>{events.name}</>
+                ) : (
+                  <>{events.locationShort}</>
+                )}
               </ContentText>
             </Grid>
             <Grid item xs={12}>
-              <ContentText variant={"h3"} sx={{ mt: "1em", color: fontColor }}>
+              <ContentText variant={matchesBig ? "h2": "h3"} sx={{ mt: "1em", color: fontColor }}>
                 {events.date}
               </ContentText>
             </Grid>
@@ -78,14 +79,14 @@ export const Events = () => {
               </ContentText>
             </Grid>
             {matchesPhone && (
-                <Grid item xs={12}>
-                    <ContentText
-                        variant={"h6"}
-                        sx={{ mt: "2em", color: fontColor }}
-                    >
-                        {events.locationShort}
-                    </ContentText>
-                </Grid>
+              <Grid item xs={12}>
+                <ContentText
+                  variant={"h6"}
+                  sx={{ mt: "2em", color: fontColor }}
+                >
+                  {events.locationShort}
+                </ContentText>
+              </Grid>
             )}
             <Grid item xs={12}>
               <Box sx={{ width: "13em", mt: "6em", mx: "auto" }}>
@@ -98,7 +99,7 @@ export const Events = () => {
                           ? "2px solid" + fontColor
                           : "1px solid" + fontColor,
                       }}
-                      size={"medium"}
+                      size={matchesBig ? "large": "medium"}
                       variant={"outlined"}
                     >
                       {t("tickets")}
@@ -108,7 +109,7 @@ export const Events = () => {
               </Box>
             </Grid>
             <Grid item xs={12}>
-              <Box sx={{ width: "13em", mx: "auto", mt: "1em", mb: "4em" }}>
+              <Box sx={{ width: "13em", mx: "auto", mt: matchesBig ? "2em": "1em", mb: "4em" }}>
                 <GlitchTypography>
                   <RouterLink to={"details"}>
                     <ContentButton
@@ -118,7 +119,7 @@ export const Events = () => {
                           ? "2px solid" + fontColor
                           : "1px solid" + fontColor,
                       }}
-                      size={"medium"}
+                      size={matchesBig ? "large": "medium"}
                       variant={"outlined"}
                     >
                       {t("info")}

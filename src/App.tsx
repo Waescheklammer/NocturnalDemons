@@ -64,7 +64,8 @@ function App() {
               >
                 <MenuIcon
                   sx={{
-                    color: open || isDetails ? "secondary.light" : "secondary.main",
+                    color:
+                      open || isDetails ? "secondary.light" : "secondary.main",
                     zIndex: "999",
                     position: "fixed",
                     width: "2em",

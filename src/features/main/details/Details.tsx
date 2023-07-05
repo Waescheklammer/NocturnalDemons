@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, useMediaQuery, useTheme, } from "@mui/material";
+import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { GlitchTypography } from "../../../components/GlitchTypography";
 import { Link } from "react-router-dom";
@@ -31,31 +31,30 @@ export const Details = () => {
       {!matchesPhone && <ScrollButton></ScrollButton>}
       <Box sx={{ mb: "3em" }}>
         {matchesPhone ? (
-            <img
-                src={events.imgPromo}
-                alt={"Nocturnal Demons"}
-                style={{
-                  width: "100%",
-                  height: "70vh",
-                  marginTop: "15vh",
-                  marginBottom: "15vh",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                }}
-            />
+          <img
+            src={events.imgPromo}
+            alt={"Nocturnal Demons"}
+            style={{
+              width: "100%",
+              height: "70vh",
+              marginTop: "15vh",
+              marginBottom: "15vh",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          />
         ) : (
-            <img
-                src={events.imgCover}
-                alt={"Nocturnal Demons"}
-                style={{
-                  width: "100%",
-                  height: matchesTablet ? "94vh" : "80vh",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                }}
-            />
+          <img
+            src={events.imgCover}
+            alt={"Nocturnal Demons"}
+            style={{
+              width: "100%",
+              height: matchesTablet ? "94vh" : "80vh",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          />
         )}
-
       </Box>
       <Box sx={{ mb: "5em", maxWidth: "25em", mx: "auto" }}>
         <Link to={events.ticketLink}>
@@ -85,7 +84,10 @@ export const Details = () => {
           <Grid item xs={12} md={6}>
             <ContentText
               variant={"h4"}
-              sx={{ mb: "0.5em", color: !matchesPhone ? "primary.main" : "#883CC0" }}
+              sx={{
+                mb: "0.5em",
+                color: !matchesPhone ? "primary.main" : "#883CC0",
+              }}
             >
               {events.name}
             </ContentText>
@@ -100,7 +102,10 @@ export const Details = () => {
             </ContentText>
             <ContentText
               variant={"h4"}
-              sx={{ mb: "1em", color: !matchesPhone ? "primary.main" : "#883CC0" }}
+              sx={{
+                mb: "1em",
+                color: !matchesPhone ? "primary.main" : "#883CC0",
+              }}
             >
               {t("location")}
             </ContentText>
@@ -128,7 +133,10 @@ export const Details = () => {
           <Grid item xs={12} md={6}>
             <ContentText
               variant={"h4"}
-              sx={{ mb: "0.5em", color: !matchesPhone ? "primary.main" : "#883CC0" }}
+              sx={{
+                mb: "0.5em",
+                color: !matchesPhone ? "primary.main" : "#883CC0",
+              }}
             >
               {t("lineup")}
             </ContentText>
@@ -173,7 +181,10 @@ export const Details = () => {
           </Grid>
         </Grid>
       </Box>
-      <ContentText sx={{ color: !matchesPhone ? "primary.main" : "#883CC0", mb: "2em" }} variant={"h4"}>
+      <ContentText
+        sx={{ color: !matchesPhone ? "primary.main" : "#883CC0", mb: "2em" }}
+        variant={"h4"}
+      >
         {t("acts")}
       </ContentText>
       <Box>
