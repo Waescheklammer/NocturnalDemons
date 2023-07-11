@@ -49,9 +49,9 @@ export const Imprint = () => {
         <br />
         <Typography variant={"h5"}>{t("content")}</Typography>
         <Typography variant={"subtitle1"}>
-          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Als Diensteanbieter sind wir gemäß § 7
-          Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
-          Gesetzen verantwortlich.
+          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Als
+          Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf
+          diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
         </Typography>
         <br />
         <Typography variant={"h5"}>{t("links")}</Typography>
