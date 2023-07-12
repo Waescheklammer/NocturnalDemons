@@ -38,7 +38,7 @@ export const Events = () => {
             src={"/images/logo/logo.webp"}
             alt={"Nocturnal Demons"}
             style={{
-              width: "80%",
+              width: "70%",
               marginTop: "5em",
               height: "30vh",
               marginLeft: "auto",
