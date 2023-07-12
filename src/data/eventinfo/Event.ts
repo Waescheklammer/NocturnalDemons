@@ -6,7 +6,7 @@ export const events: EventInfo = {
   locationFull: "Nostromo Schall & Rauch e.V.",
   address: "Cottbuser Str. 21, 02826 Görlitz",
   date: "16.09",
-  timeStart: "20:00",
+  timeStart: "22:00",
   timeEnd: "07:00",
   genre: "Drum n Bass | Techno",
   ticketLink: "https://nocturnaldemons.ticket.io/#",
