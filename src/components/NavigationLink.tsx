@@ -37,7 +37,7 @@ export const NavigationLink = ({
   }, [location]);
 
   const handleBgColor = () => {
-    title === t("details") || title === t("gallery")
+    title === t("details") || title === t("gallery") || title === (t("tickets"))
       ? changeBgc(theme.palette.secondary.main)
       : changeBgc(theme.palette.secondary.light);
   };

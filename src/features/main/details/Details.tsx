@@ -192,21 +192,32 @@ export const Details = () => {
           container
           sx={{ justifyContent: "center", gap: "2em", mb: "5em" }}
         >
-          <ContentText variant={"h4"}>TBA</ContentText>
-          {/*acts.map((a) => (
-            <Grid item xs={6} md={3} key={a.name}>
-              <img
-                src={events.imgCover}
-                alt={"Nocturnal Demons"}
-                style={{ width: "80%" }}
-                loading="lazy"
-              />
-              <ContentText variant={"h5"}>{a.name}</ContentText>
-              <ContentText variant={"subtitle1"}>
-                {a.nationality} {a.city}
+          <Grid item xs={6} md={3}>
+            <img
+              src={events.imgCover}
+              alt={"Nocturnal Demons"}
+              style={{ width: "80%" }}
+              loading="lazy"
+            />
+            <ContentText variant={"h5"}>{"COCKROACH"}</ContentText>
+          </Grid>
+          {acts.map((a) => (
+            <Grid
+              item
+              xs={6}
+              md={3}
+              key={a.name}
+              sx={{
+                border: "1px solid",
+                borderColor: "primary.dark",
+                minHeight: "190px",
+              }}
+            >
+              <ContentText variant={"h6"} sx={{ my: "40%" }}>
+                TBA
               </ContentText>
             </Grid>
-          ))*/}
+          ))}
         </Grid>
       </Box>
     </Box>
