@@ -129,9 +129,10 @@ export const Contact = () => {
   );
 };
 
-const leaders = ["Gashi", "Kosta", "Robin", "Matze", "Nico", "Justin"];
+const leaders = ["Gashi", "Kosta", "Robin", "Matze", "Nico"];
 
 const members = [
+  "Justin",
   "Luxn",
   "Krissy",
   "Nelly",
