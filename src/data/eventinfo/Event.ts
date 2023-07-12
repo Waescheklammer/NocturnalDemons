@@ -5,7 +5,7 @@ export const events: EventInfo = {
   locationShort: "Nostromo Görlitz",
   locationFull: "Nostromo Schall & Rauch e.V.",
   address: "Cottbuser Str. 21, 02826 Görlitz",
-  date: "16.09",
+  date: "16.09.23",
   timeStart: "22:00",
   timeEnd: "07:00",
   genre: "Drum n Bass | Techno",
