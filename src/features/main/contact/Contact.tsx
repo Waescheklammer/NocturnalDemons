@@ -136,7 +136,7 @@ const members = [
   "Luxn",
   "Krissy",
   "Nelly",
-  "Emy",
+  "Emi",
   "Franka",
   "Caro",
   "Miro",
@@ -145,7 +145,7 @@ const members = [
   "Dani",
   "Kurt",
   "Pablo",
-  "Klimke",
+  "Toni",
   "Olli",
   "Alex",
 ];

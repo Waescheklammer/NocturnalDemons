@@ -19,8 +19,10 @@ export const Privacy = () => {
     <Box
       sx={{
         mx: matches ? "0.5em" : "10em",
-        my: matches ? "1em" : "2em",
+        my: matches ? "4em" : "2em",
         minHeight: matches ? "100vh" : "80vh",
+        maxWidth: "100vw",
+        overflowWrap: "break-word",
       }}
     >
       <Box sx={{ border: "1px solid white", mb: "0.5em" }}>
