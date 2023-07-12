@@ -49,24 +49,20 @@ export const Imprint = () => {
         <br />
         <Typography variant={"h5"}>{t("content")}</Typography>
         <Typography variant={"subtitle1"}>
-          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Als
-          Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf
-          diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+          Wir haben die Inhalte unserer Seiten mit größtmöglicher Sorgfalt erstellt.
+          Gemäß § 7 Abs.1 TMG sind wir als Diensteanbieter für die eigenen Inhalte
+          auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
         </Typography>
         <br />
         <Typography variant={"h5"}>{t("links")}</Typography>
         <Typography variant={"subtitle1"}>
-          Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
-          Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
-          fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-          verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
-          Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der
-          Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige
-          Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine
-          permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne
-          konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei
-          Bekanntwerden von Rechtsverletzungen werden wir derartige Links
-          umgehend entfernen.
+          In unserem Angebot finden sich Verknüpfungen zu externen Webseiten von Dritten.
+          Wir haben keinerlei Einfluss auf den Inhalt dieser Seiten und können daher keinerlei Gewähr dafür übernehmen.
+          Für die Inhalte der verlinkten Seiten ist ausschließlich der jeweilige Anbieter oder Betreiber verantwortlich.
+          Zum Zeitpunkt der Verlinkung wurden die verknüpften Seiten sorgfältig auf mögliche Verstöße gecheckt,
+          jedoch waren etwaige illegale Inhalte nicht ersichtlich.
+          Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne klare Anzeichen für eine Rechtsverletzung unzumutbar.
+          Sollten uns Verstöße bekannt werden, werden wir sofortige Maßnahmen ergreifen und diese Verknüpfungen entfernen.
         </Typography>
         <br />
         <Typography variant={"h5"}>{t("validity")}</Typography>

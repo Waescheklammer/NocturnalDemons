@@ -100,7 +100,7 @@ export const Menu = () => {
           }}
         >
           <img
-            src={"/images/logo/textless.png"}
+            src={"/images/logo/textless.webp"}
             alt={"Nocturnal Demons Head"}
             style={{ width: "4em", height: "3em" }}
           />
@@ -165,28 +165,28 @@ export const Menu = () => {
             }}
           >
             <img
-              src={"/images/flags/deutschland.png"}
+              src={"/images/flags/deutschland.webp"}
               alt={"Nocturnal Demons"}
               style={{ width: "2em", height: "2em" }}
               onClick={changeToDe}
               loading="lazy"
             />
             <img
-              src={"/images/flags/grossbritannien.png"}
+              src={"/images/flags/grossbritannien.webp"}
               alt={"Nocturnal Demons"}
               style={{ width: "2em", height: "2em" }}
               onClick={changeToEn}
               loading="lazy"
             />
             <img
-              src={"/images/flags/czech.png"}
+              src={"/images/flags/czech.webp"}
               alt={"Nocturnal Demons"}
               style={{ width: "2em", height: "2em" }}
               onClick={changeToCz}
               loading="lazy"
             />
             <img
-              src={"/images/flags/poland.png"}
+              src={"/images/flags/poland.webp"}
               alt={"Nocturnal Demons"}
               style={{ width: "2em", height: "2em" }}
               onClick={changeToPl}

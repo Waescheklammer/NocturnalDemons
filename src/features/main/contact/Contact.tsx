@@ -88,7 +88,7 @@ export const Contact = () => {
           {t("team")}
         </ContentText>
         <img
-          src={"/images/logo/logo.png"}
+          src={"/images/logo/logo.webp"}
           alt={"Nocturnal Demons"}
           style={{ height: "10em" }}
           loading="lazy"

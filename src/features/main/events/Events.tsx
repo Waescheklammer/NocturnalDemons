@@ -35,7 +35,7 @@ export const Events = () => {
           </Grid>
         ) : (
           <img
-            src={"/images/logo/logo.png"}
+            src={"/images/logo/logo.webp"}
             alt={"Nocturnal Demons"}
             style={{
               width: "80%",

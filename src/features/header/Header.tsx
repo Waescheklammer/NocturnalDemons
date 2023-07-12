@@ -30,7 +30,10 @@ export const Header = () => {
   const matchesBig = useMediaQuery("(min-width:1500px)");
 
   useEffect(() => {
-    setIsDetails(location.pathname === "/details");
+    setIsDetails(location.pathname === "/details" ||
+        location.pathname === "/gallery" ||
+        location.pathname === "/privacy" ||
+        location.pathname === "/imprint");
   }, [location]);
 
   useEffect(() => {
@@ -60,7 +63,7 @@ export const Header = () => {
           >
             {!matchesMedium && (
               <img
-                src={"/images/logo/leftHand.png"}
+                src={"/images/logo/leftHand.webp"}
                 alt={"Nocturnal Demons"}
                 style={{ width: "3em", height: "3em" }}
               />
@@ -78,7 +81,7 @@ export const Header = () => {
               onClick={() => changeBgc(theme.palette.secondary.light)}
             >
               <img
-                src={"/images/logo/text.png"}
+                src={isDetails ? "/images/logo/text_dark.webp" : "/images/logo/text_light.webp"}
                 alt={"Nocturnal Demons"}
                 style={{
                   width: !matchesMedium
@@ -110,7 +113,7 @@ export const Header = () => {
             <NavigationLink title={t("info")} link={"/contact"} />
             {!matchesMedium && (
               <img
-                src={"/images/logo/rightHand.png"}
+                src={"/images/logo/rightHand.webp"}
                 alt={"Nocturnal Demons"}
                 style={{ width: "3em", height: "3em" }}
               />
@@ -137,7 +140,7 @@ export const Header = () => {
         >
           <MenuItem value={Lang.de}>
             <img
-              src={"/images/flags/deutschland.png"}
+              src={"/images/flags/deutschland.webp"}
               alt={Lang.de}
               style={{ width: "2em", height: "2em" }}
               loading="lazy"
@@ -145,7 +148,7 @@ export const Header = () => {
           </MenuItem>
           <MenuItem value={Lang.en}>
             <img
-              src={"/images/flags/grossbritannien.png"}
+              src={"/images/flags/grossbritannien.webp"}
               alt={Lang.en}
               style={{ width: "2em", height: "2em" }}
               loading="lazy"
@@ -153,7 +156,7 @@ export const Header = () => {
           </MenuItem>
           <MenuItem value={Lang.cz}>
             <img
-              src={"/images/flags/czech.png"}
+              src={"/images/flags/czech.webp"}
               alt={Lang.cz}
               style={{ width: "2em", height: "2em" }}
               loading="lazy"
@@ -161,7 +164,7 @@ export const Header = () => {
           </MenuItem>
           <MenuItem value={Lang.pl}>
             <img
-              src={"/images/flags/poland.png"}
+              src={"/images/flags/poland.webp"}
               alt={Lang.pl}
               style={{ width: "2em", height: "2em" }}
               loading="lazy"
