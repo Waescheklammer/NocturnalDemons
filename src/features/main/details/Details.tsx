@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Grid, styled, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { GlitchTypography } from "../../../components/GlitchTypography";
 import { Link } from "react-router-dom";
@@ -10,7 +10,18 @@ import { lineUpData } from "../../../data/eventinfo/LineUpData";
 import { acts } from "../../../data/eventinfo/Acts";
 import { events } from "../../../data/eventinfo/Event";
 import { ContentText } from "../../../components/ContentText";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import { ScrollButton } from "../../../components/ScrollButton";
+
+const DetailsLink = styled(Link)(({ theme }) => ({
+  color: theme.palette.secondary.light,
+  textDecoration: "none",
+  transition: "0.3s",
+  "&:hover": {
+    cursor: "pointer",
+    color: theme.palette.primary.main,
+  },
+}));
 
 export const Details = () => {
   const { t } = useTranslation("details");
@@ -192,30 +203,43 @@ export const Details = () => {
           container
           sx={{ justifyContent: "center", gap: "2em", mb: "5em" }}
         >
-          {/*<Grid item xs={6} md={3}>
-            <img
-                src={events.imgCover}
-                alt={"Nocturnal Demons"}
-                style={{width: "80%"}}
-                loading="lazy"
-            />
-            <ContentText variant={"h5"}>{"COCKROACH"}</ContentText>
-          </Grid>*/}
-          {acts.map((a) => (
+          {acts.map((act, id) => (
             <Grid
               item
               xs={6}
               md={3}
-              key={a.name}
+              key={id}
               sx={{
                 border: "1px solid",
                 borderColor: "primary.dark",
                 minHeight: "190px",
               }}
             >
-              <ContentText variant={"h6"} sx={{ my: "40%" }}>
-                TBA
-              </ContentText>
+              {act?.img.length > 0 ? (
+                  <Box key={act.name} sx={{pb: "1em"}}>
+                    <img
+                        src={act.img}
+                        alt={"Nocturnal Demons"}
+                        style={{width: "100%"}}
+                        loading="lazy"
+                    />
+                    <ContentText variant={"subtitle1"}>Genre - {act.genre}</ContentText>
+                    <ContentText variant={"subtitle1"}>{act.city}, {act.nationality}</ContentText>
+                    <DetailsLink to={act.instagramLink}><InstagramIcon/></DetailsLink>
+                    <DetailsLink to={act.soundcloudLink !== undefined ? act.soundcloudLink : ""}>
+                      <img
+                          src={"/images/logo/soundcloud.webp"}
+                          alt={"Nocturnal Demons"}
+                          style={{width: "1.5em"}}
+                          loading="lazy"
+                      />
+                    </DetailsLink>
+                  </Box>
+              ) : (
+                  <ContentText variant={"h6"} sx={{ my: "40%" }} key={act.name}>
+                    TBA
+                  </ContentText>
+              )}
             </Grid>
           ))}
         </Grid>
