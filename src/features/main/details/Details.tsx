@@ -211,8 +211,8 @@ export const Details = () => {
               key={id}
               sx={{
                 border: "1px solid",
-                borderColor: "primary.dark",
-                minHeight: "190px",
+                borderColor: !matchesPhone ? "primary.dark" : "#883CC0",
+                minHeight: "250px",
               }}
             >
               {act?.img.length > 0 ? (
