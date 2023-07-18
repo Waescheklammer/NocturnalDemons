@@ -4,14 +4,14 @@ import { Nationality } from "../enums/Nationality";
 
 export const acts: Act[] = [
   {
-    name: "Kinoko",
+    name: "",
     genre: Genre.neurofunk,
     label: "",
     nationality: Nationality.cz,
     city: "Prag",
-    soundcloudLink: "https://soundcloud.com/violetkinoko",
-    instagramLink: "https://www.instagram.com/violet.kinoko/",
-    img: "/images/artists/kinoko.webp",
+    soundcloudLink: "",
+    instagramLink: "",
+    img: "",
   },
   {
     name: "",
