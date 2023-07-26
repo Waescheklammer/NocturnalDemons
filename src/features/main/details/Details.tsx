@@ -219,21 +219,26 @@ export const Details = () => {
                   <Box key={act.name} sx={{pb: "1em"}}>
                     <img
                         src={act.img}
-                        alt={"Nocturnal Demons"}
+                        alt={act.name}
                         style={{width: "100%"}}
                         loading="lazy"
                     />
                     <ContentText variant={"subtitle1"}>Genre - {act.genre}</ContentText>
+                    {act.label.length > 0 && (
+                        <ContentText variant={"subtitle1"}>Label - {act.label}</ContentText>
+                    )}
                     <ContentText variant={"subtitle1"}>{act.city}, {act.nationality}</ContentText>
                     <DetailsLink to={act.instagramLink}><InstagramIcon/></DetailsLink>
-                    <DetailsLink to={act.soundcloudLink !== undefined ? act.soundcloudLink : ""}>
-                      <img
-                          src={"/images/logo/soundcloud.webp"}
-                          alt={"Nocturnal Demons"}
-                          style={{width: "1.5em"}}
-                          loading="lazy"
-                      />
-                    </DetailsLink>
+                    {act.soundcloudLink.length > 0 && (
+                        <DetailsLink to={act.soundcloudLink}>
+                          <img
+                            src={"/images/logo/soundcloud.webp"}
+                            alt={"Nocturnal Demons"}
+                            style={{width: "1.5em"}}
+                            loading="lazy"
+                        />
+                        </DetailsLink>
+                    )}
                   </Box>
               ) : (
                   <ContentText variant={"h6"} sx={{ my: "40%" }} key={act.name}>
