@@ -151,8 +151,7 @@ export const Details = () => {
             >
               {t("lineup")}
             </ContentText>
-            <ContentText variant={"h4"}>TBA</ContentText>
-            {/*lineUpData.stages.map((stage) => (
+            {lineUpData.stages.map((stage) => (
               <Box key={stage.name}>
                 <ContentText
                   variant={"h6"}
@@ -166,10 +165,7 @@ export const Details = () => {
                     sx={{ width: "60%", mx: "auto" }}
                     key={act.name}
                   >
-                    <Grid item xs={6}>
-                      <ContentText>{act.time}</ContentText>
-                    </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
                       <ContentText
                         variant={
                           lineUpData.headliners.includes(act.name)
@@ -188,7 +184,8 @@ export const Details = () => {
                   </Grid>
                 ))}
               </Box>
-            ))*/}
+            ))}
+              <ContentText variant={"h6"} sx={{mt: "5em"}}>More is following..</ContentText>
           </Grid>
         </Grid>
       </Box>
