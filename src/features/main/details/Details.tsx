@@ -186,6 +186,7 @@ export const Details = () => {
               </Box>
             ))}
               <ContentText variant={"h6"} sx={{mt: "5em"}}>More is following..</ContentText>
+              <ContentText variant={"subtitle2"} sx={{mt: "5em"}}>(...but not within the next few days because everyone's at Let it Roll. See ya!)</ContentText>
           </Grid>
         </Grid>
       </Box>

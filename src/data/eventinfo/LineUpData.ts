@@ -7,6 +7,11 @@ export const lineUpData: LineUp = {
       name: "Neurofunk",
       acts: [
         {
+          name: "Aven",
+          time: "00:00",
+          genre: "Neurofunk DnB",
+        },
+        {
           name: "Cockroach",
           time: "00:00",
           genre: "Neurofunk DnB",
