@@ -26,6 +26,11 @@ export const lineUpData: LineUp = {
           time: "06:00",
           genre: "Neurofunk DnB",
         },
+        {
+          name: "BEAST:FREQNZ",
+          time: "06:00",
+          genre: "Neurofunk DnB",
+        },
       ],
     },
   ],
