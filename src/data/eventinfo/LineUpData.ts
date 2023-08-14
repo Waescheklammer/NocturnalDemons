@@ -17,6 +17,11 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
         {
+          name: "BEAST:FREQNZ",
+          time: "06:00",
+          genre: "Neurofunk DnB",
+        },
+        {
           name: "DIZZYDOSE B2B TERRIFYING",
           time: "05:00",
           genre: "Neurofunk DnB",
@@ -27,7 +32,12 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
         {
-          name: "BEAST:FREQNZ",
+          name: "B-HAT",
+          time: "06:00",
+          genre: "Neurofunk DnB",
+        },
+        {
+          name: "TOTO",
           time: "06:00",
           genre: "Neurofunk DnB",
         },
