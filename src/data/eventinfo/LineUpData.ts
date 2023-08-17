@@ -22,6 +22,11 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
         {
+          name: "TBA",
+          time: "01:00",
+          genre: "Neurofunk DnB",
+        },
+        {
           name: "BEAST:FREQNZ",
           time: "02:00",
           genre: "Neurofunk DnB",
@@ -34,6 +39,11 @@ export const lineUpData: LineUp = {
         {
           name: "TOTO b2b MARKO",
           time: "04:00",
+          genre: "Neurofunk DnB",
+        },
+        {
+          name: "TBA",
+          time: "05:00",
           genre: "Neurofunk DnB",
         },
         {
