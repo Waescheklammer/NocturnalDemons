@@ -42,7 +42,7 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
         {
-          name: "TBA",
+          name: "KEON",
           time: "05:00",
           genre: "Neurofunk DnB",
         },
