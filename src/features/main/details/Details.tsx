@@ -162,10 +162,26 @@ export const Details = () => {
                 {stage.acts.map((act) => (
                   <Grid
                     container
-                    sx={{ width: "60%", mx: "auto" }}
+                    sx={{ width: "50%", mx: "auto" }}
                     key={act.name}
                   >
-                    <Grid item xs={12}>
+                    <Grid item xs={3}>
+                      <ContentText
+                          variant={
+                            lineUpData.headliners.includes(act.name)
+                                ? "subtitle1"
+                                : "subtitle2"
+                          }
+                          sx={{
+                            fontWeight: lineUpData.headliners.includes(act.name)
+                                ? "bold"
+                                : "normal",
+                          }}
+                      >
+                        {act.time}
+                      </ContentText>
+                    </Grid>
+                    <Grid item xs={9}>
                       <ContentText
                         variant={
                           lineUpData.headliners.includes(act.name)

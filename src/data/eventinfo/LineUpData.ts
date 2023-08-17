@@ -8,7 +8,12 @@ export const lineUpData: LineUp = {
       acts: [
         {
           name: "Aven",
-          time: "00:00",
+          time: "22:00",
+          genre: "Neurofunk DnB",
+        },
+        {
+          name: "DIZZYDOSE B2B TERRIFYING",
+          time: "23:00",
           genre: "Neurofunk DnB",
         },
         {
@@ -18,31 +23,21 @@ export const lineUpData: LineUp = {
         },
         {
           name: "BEAST:FREQNZ",
-          time: "06:00",
-          genre: "Neurofunk DnB",
-        },
-        {
-          name: "DIZZYDOSE B2B TERRIFYING",
-          time: "05:00",
-          genre: "Neurofunk DnB",
-        },
-        {
-          name: "Dropz",
-          time: "06:00",
+          time: "02:00",
           genre: "Neurofunk DnB",
         },
         {
           name: "B-HAT",
-          time: "06:00",
+          time: "03:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "TOTO",
-          time: "06:00",
+          name: "TOTO b2b MARKO",
+          time: "04:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "MARKO",
+          name: "Dropz",
           time: "06:00",
           genre: "Neurofunk DnB",
         },
