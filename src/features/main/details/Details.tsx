@@ -165,23 +165,7 @@ export const Details = () => {
                     sx={{ width: "50%", mx: "auto" }}
                     key={act.name}
                   >
-                    <Grid item xs={3}>
-                      <ContentText
-                          variant={
-                            lineUpData.headliners.includes(act.name)
-                                ? "subtitle1"
-                                : "subtitle2"
-                          }
-                          sx={{
-                            fontWeight: lineUpData.headliners.includes(act.name)
-                                ? "bold"
-                                : "normal",
-                          }}
-                      >
-                        {act.time}
-                      </ContentText>
-                    </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={12}>
                       <ContentText
                         variant={
                           lineUpData.headliners.includes(act.name)
@@ -240,7 +224,7 @@ export const Details = () => {
                     {act.label.length > 0 && (
                         <ContentText variant={"subtitle1"}>Label - {act.label}</ContentText>
                     )}
-                    <ContentText variant={"subtitle1"}>{act.city}, {act.nationality}</ContentText>
+                    <ContentText variant={"subtitle1"}>{act.city} - {act.nationality}</ContentText>
                     <DetailsLink to={act.instagramLink}><InstagramIcon/></DetailsLink>
                     {act.soundcloudLink.length > 0 && (
                         <DetailsLink to={act.soundcloudLink}>

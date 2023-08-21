@@ -53,5 +53,15 @@ export const lineUpData: LineUp = {
         },
       ],
     },
+    {
+      name: "Techno",
+      acts: [
+        {
+          name : "Zeremonienmeister",
+          time: "2323we",
+          genre: "Techno"
+        }
+      ]
+    }
   ],
 };

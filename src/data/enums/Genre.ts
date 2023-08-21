@@ -3,4 +3,5 @@ export enum Genre {
   liquid = "Liquid DnB",
   techno = "Techno",
   electro = "Electro",
+  hard = "Hard DnB"
 }
