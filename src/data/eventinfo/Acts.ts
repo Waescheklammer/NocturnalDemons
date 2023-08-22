@@ -118,7 +118,7 @@ export const acts: Act[] = [
     genre: Genre.techno,
     label: "",
     nationality: Nationality.de,
-    city: "",
+    city: "Görlitz",
     soundcloudLink: "https://soundcloud.com/dominic-senftleben03",
     instagramLink: "https://www.instagram.com/zeremonienmeister.dj/",
     img: "/images/artists/zeremonien.webp",
