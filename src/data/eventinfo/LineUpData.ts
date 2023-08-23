@@ -60,6 +60,11 @@ export const lineUpData: LineUp = {
           name : "Zeremonienmeister",
           time: "2323we",
           genre: "Techno"
+        },
+        {
+          name : "DO NOT DISTURB",
+          time: "2323we",
+          genre: "Techno"
         }
       ]
     }
