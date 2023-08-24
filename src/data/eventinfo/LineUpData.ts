@@ -65,6 +65,11 @@ export const lineUpData: LineUp = {
           name : "DO NOT DISTURB",
           time: "2323we",
           genre: "Techno"
+        },
+        {
+          name : "DARK VISION",
+          time: "2323we",
+          genre: "Techno"
         }
       ]
     }
