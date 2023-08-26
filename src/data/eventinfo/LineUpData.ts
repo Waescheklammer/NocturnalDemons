@@ -70,6 +70,21 @@ export const lineUpData: LineUp = {
           name : "DARK VISION",
           time: "2323we",
           genre: "Techno"
+        },
+        {
+          name : "Bounty 3000",
+          time: "2323we",
+          genre: "Techno"
+        },
+        {
+          name : "YANA",
+          time: "2323we",
+          genre: "Techno"
+        },
+        {
+          name : "Schwizzynator",
+          time: "2323we",
+          genre: "Techno"
         }
       ]
     }
