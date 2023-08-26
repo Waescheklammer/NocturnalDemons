@@ -168,7 +168,7 @@ export const acts: Act[] = [
     genre: Genre.techno,
     label: "Basement Defaults",
     nationality: Nationality.de,
-    city: "",
+    city: "Bavarian Forest",
     soundcloudLink: "https://soundcloud.com/schwizzynator",
     instagramLink: "https://www.instagram.com/schwizzynator/",
     img: "/images/artists/schwizzy.webp",
