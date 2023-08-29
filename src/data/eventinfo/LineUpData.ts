@@ -87,6 +87,16 @@ export const lineUpData: LineUp = {
           genre: "Techno"
         }
       ]
+    },
+    {
+      name: "Mixed",
+      acts: [
+        {
+          name: "DYS:KO",
+          time: "2323",
+          genre: "DnB"
+        }
+      ]
     }
   ],
 };
