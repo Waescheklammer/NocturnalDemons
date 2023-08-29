@@ -175,7 +175,7 @@ export const acts: Act[] = [
   },
   {
     name: "DYS:KO",
-    genre: Genre.neurofunk,
+    genre: Genre.liquid,
     label: "Snare Junkies",
     nationality: Nationality.cz,
     city: "Prague",

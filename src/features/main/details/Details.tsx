@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback, useState} from "react";
 import { Box, Grid, styled, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { GlitchTypography } from "../../../components/GlitchTypography";
@@ -102,8 +102,11 @@ export const Details = () => {
             >
               {events.name}
             </ContentText>
-            <ContentText variant={"h6"} sx={{ mb: "2.5em" }}>
+            <ContentText variant={"h6"} sx={{ mb: "1em" }}>
               {events.genre}
+            </ContentText>
+            <ContentText variant={"h6"} sx={{ mb: "2.5em" }}>
+              26 DJs
             </ContentText>
             <ContentText variant={"h5"} sx={{ mb: "1em" }}>
               {events.date}
@@ -185,7 +188,6 @@ export const Details = () => {
                 ))}
               </Box>
             ))}
-              <ContentText variant={"h6"} sx={{mt: "5em"}}>More is following..</ContentText>
           </Grid>
         </Grid>
       </Box>
@@ -213,34 +215,42 @@ export const Details = () => {
               }}
             >
               {act?.img.length > 0 ? (
-                  <Box key={act.name} sx={{pb: "1em"}}>
-                    <img
-                        src={act.img}
-                        alt={act.name}
-                        style={{width: "100%"}}
-                        loading="lazy"
-                    />
-                    <ContentText variant={"subtitle1"}>Genre - {act.genre}</ContentText>
-                    {act.label.length > 0 && (
-                        <ContentText variant={"subtitle1"}>Label - {act.label}</ContentText>
-                    )}
-                    <ContentText variant={"subtitle1"}>{act.city} - {act.nationality}</ContentText>
-                    <DetailsLink to={act.instagramLink}><InstagramIcon/></DetailsLink>
-                    {act.soundcloudLink.length > 0 && (
-                        <DetailsLink to={act.soundcloudLink}>
-                          <img
-                            src={"/images/logo/soundcloud.webp"}
-                            alt={"Nocturnal Demons"}
-                            style={{width: "1.5em"}}
-                            loading="lazy"
-                        />
-                        </DetailsLink>
-                    )}
-                  </Box>
-              ) : (
-                  <ContentText variant={"h6"} sx={{ my: "40%" }} key={act.name}>
-                    TBA
+                <Box key={act.name} sx={{ pb: "1em" }}>
+                  <img
+                    src={act.img}
+                    alt={act.name}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                  <ContentText variant={"subtitle1"}>
+                    Genre - {act.genre}
                   </ContentText>
+                  {act.label.length > 0 && (
+                    <ContentText variant={"subtitle1"}>
+                      Label - {act.label}
+                    </ContentText>
+                  )}
+                  <ContentText variant={"subtitle1"}>
+                    {act.city} - {act.nationality}
+                  </ContentText>
+                  <DetailsLink to={act.instagramLink}>
+                    <InstagramIcon />
+                  </DetailsLink>
+                  {act.soundcloudLink.length > 0 && (
+                    <DetailsLink to={act.soundcloudLink}>
+                      <img
+                        src={"/images/logo/soundcloud.webp"}
+                        alt={"Nocturnal Demons"}
+                        style={{ width: "1.5em" }}
+                        loading="lazy"
+                      />
+                    </DetailsLink>
+                  )}
+                </Box>
+              ) : (
+                <ContentText variant={"h6"} sx={{ my: "40%" }} key={act.name}>
+                  TBA
+                </ContentText>
               )}
             </Grid>
           ))}

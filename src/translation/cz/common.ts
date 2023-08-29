@@ -38,6 +38,7 @@ export const czCommon = {
     location: "Umístění",
     map: "Mapa",
     acts: "Umělci",
+    timetable: "Jízdní řád"
   },
   imprint: {
     imprint: "Imprint",

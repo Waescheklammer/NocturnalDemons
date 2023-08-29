@@ -1,7 +1,7 @@
 import { LineUp } from "../types/LineUp";
 
 export const lineUpData: LineUp = {
-  headliners: ["Cockroach", "PRDK", "BEAST:FREQNZ"],
+  headliners: ["Cockroach", "PRDK", "BEAST:FREQNZ", "Bounty 3000", "DARK VISION"],
   stages: [
     {
       name: "Neurofunk",
@@ -52,51 +52,54 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
       ],
+      timetable: "/images/artists/neuro.webp",
     },
     {
       name: "Techno",
       acts: [
         {
           name : "Zeremonienmeister",
-          time: "2323we",
-          genre: "Techno"
-        },
-        {
-          name : "DO NOT DISTURB",
-          time: "2323we",
+          time: "22:00",
           genre: "Techno"
         },
         {
           name : "DARK VISION",
-          time: "2323we",
-          genre: "Techno"
-        },
-        {
-          name : "Bounty 3000",
-          time: "2323we",
+          time: "23:00",
           genre: "Techno"
         },
         {
           name : "YANA",
-          time: "2323we",
+          time: "01:00",
+          genre: "Techno"
+        },
+        {
+          name : "Bounty 3000",
+          time: "02:00",
+          genre: "Techno"
+        },
+        {
+          name : "DO NOT DISTURB",
+          time: "03:00",
           genre: "Techno"
         },
         {
           name : "Schwizzynator",
-          time: "2323we",
+          time: "05:00",
           genre: "Techno"
         }
-      ]
+      ],
+      timetable: "http://localhost:3000/images/artists/techno.webp",
     },
     {
       name: "Mixed",
       acts: [
         {
           name: "DYS:KO",
-          time: "2323",
+          time: "01:00",
           genre: "DnB"
         }
-      ]
+      ],
+      timetable: "/images/artists/mixed.webp",
     }
   ],
 };

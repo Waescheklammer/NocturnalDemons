@@ -38,6 +38,7 @@ export const deCommon = {
     location: "Ort",
     map: "Karte",
     acts: "Künstler",
+    timetable: "Timetable"
   },
   imprint: {
     imprint: "Impressum",

@@ -147,5 +147,5 @@ const members = [
   "Alex",
   "Jona",
   "Natti",
-  "Anna"
+  "Anna",
 ];

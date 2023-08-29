@@ -6,6 +6,7 @@ export interface LineUp {
 interface Stage {
   name: string;
   acts: Act[];
+  timetable: string;
 }
 
 interface Act {

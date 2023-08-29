@@ -30,10 +30,12 @@ export const Header = () => {
   const matchesBig = useMediaQuery("(min-width:1500px)");
 
   useEffect(() => {
-    setIsDetails(location.pathname === "/details" ||
+    setIsDetails(
+      location.pathname === "/details" ||
         location.pathname === "/gallery" ||
         location.pathname === "/privacy" ||
-        location.pathname === "/imprint");
+        location.pathname === "/imprint"
+    );
   }, [location]);
 
   useEffect(() => {
@@ -81,7 +83,11 @@ export const Header = () => {
               onClick={() => changeBgc(theme.palette.secondary.light)}
             >
               <img
-                src={isDetails ? "/images/logo/text_dark.webp" : "/images/logo/text_light.webp"}
+                src={
+                  isDetails
+                    ? "/images/logo/text_dark.webp"
+                    : "/images/logo/text_light.webp"
+                }
                 alt={"Nocturnal Demons"}
                 style={{
                   width: !matchesMedium

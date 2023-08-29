@@ -38,6 +38,7 @@ export const enCommon = {
     location: "Location",
     map: "Map",
     acts: "Artists",
+    timetable: "Timetable"
   },
   imprint: {
     imprint: "Imprint",

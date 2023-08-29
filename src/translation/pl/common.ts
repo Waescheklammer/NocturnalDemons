@@ -38,6 +38,7 @@ export const plCommon = {
     location: "Lokalizacja",
     map: "Mapa",
     acts: "Artyści",
+    timetable: "harmonogram"
   },
   imprint: {
     imprint: "Nadruk",
