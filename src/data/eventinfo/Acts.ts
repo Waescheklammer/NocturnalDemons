@@ -184,14 +184,14 @@ export const acts: Act[] = [
     img: "/images/artists/dysko.webp",
   },
   {
-    name: "",
+    name: "AUBI",
     genre: Genre.neurofunk,
     label: "",
     nationality: Nationality.cz,
-    city: "",
+    city: "Prague",
     soundcloudLink: "",
     instagramLink: "",
-    img: "",
+    img: "/images/artists/aubi.webp",
   },
   {
     name: "",
