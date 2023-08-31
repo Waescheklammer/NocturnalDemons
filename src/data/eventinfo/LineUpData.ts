@@ -97,7 +97,12 @@ export const lineUpData: LineUp = {
           name: "DYS:KO",
           time: "01:00",
           genre: "DnB"
-        }
+        },
+        {
+          name: "AUBI",
+          time: "02:30",
+          genre: "DnB",
+        },
       ],
       timetable: "/images/artists/mixed.webp",
     }
