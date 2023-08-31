@@ -189,8 +189,8 @@ export const acts: Act[] = [
     label: "",
     nationality: Nationality.cz,
     city: "Prague",
-    soundcloudLink: "",
-    instagramLink: "",
+    soundcloudLink: "https://soundcloud.com/aubidnb",
+    instagramLink: "https://www.instagram.com/_aubi_dnb/",
     img: "/images/artists/aubi.webp",
   },
   {
