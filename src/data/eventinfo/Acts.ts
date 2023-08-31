@@ -185,7 +185,7 @@ export const acts: Act[] = [
   },
   {
     name: "AUBI",
-    genre: Genre.neurofunk,
+    genre: Genre.liquid,
     label: "",
     nationality: Nationality.cz,
     city: "Prague",
@@ -195,7 +195,7 @@ export const acts: Act[] = [
   },
   {
     name: "",
-    genre: Genre.neurofunk,
+    genre: Genre.liquid,
     label: "",
     nationality: Nationality.cz,
     city: "",
