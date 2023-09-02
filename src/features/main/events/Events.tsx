@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Box, Grid, useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { GlitchTypography } from "../../../components/GlitchTypography";
@@ -13,6 +13,27 @@ export const Events = () => {
   const matchesTablet = useMediaQuery("(max-width:810px)");
   const matchesBig = useMediaQuery("(min-width:1500px)");
   const fontColor = "secondary.light";
+  const [countdown, setCountdown] = useState<String>();
+
+  const countDownDate = new Date("Sep 16, 2023 22:00:00").getTime();
+
+  let timer = setInterval(function() {
+        const now = new Date().getTime();
+
+        const distance = countDownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const countdownString = days +"Days " +hours +"h " +minutes +"min " +seconds +"s"
+      setCountdown(countdownString)
+
+        if (distance < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
 
   return (
     <Box
@@ -74,14 +95,22 @@ export const Events = () => {
               </ContentText>
             </Grid>
             <Grid item xs={12}>
-              <ContentText
+                <ContentText
                 variant={"h6"}
                 sx={{ mt: "0.5em", color: fontColor }}
               >
-                {"| " + events.genre + " |"}
-              </ContentText>
+                    {"| " + events.genre + " |"}
+                </ContentText>
             </Grid>
-            {matchesPhone && (
+              <Grid item xs={12}>
+                  <ContentText
+                      variant={matchesBig ? "h4" : "h5"}
+                      sx={{ mt: "2em", color: fontColor, mb: "1em" }}
+                  >
+                      {countdown}
+                  </ContentText>
+              </Grid>
+              {matchesPhone && (
               <Grid item xs={12}>
                 <ContentText
                   variant={"h6"}

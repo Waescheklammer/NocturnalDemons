@@ -94,6 +94,16 @@ export const lineUpData: LineUp = {
       name: "Mixed",
       acts: [
         {
+          name: "DO:IT",
+          time: "22:00",
+          genre: "DnB"
+        },
+        {
+          name: "J-COP",
+          time: "23:30",
+          genre: "DnB",
+        },
+        {
           name: "DYS:KO",
           time: "01:00",
           genre: "DnB"
@@ -103,6 +113,11 @@ export const lineUpData: LineUp = {
           time: "02:30",
           genre: "DnB",
         },
+        {
+          name: "Hefty Mess Showcase",
+          time: "04:00",
+          genre: "DnB",
+        }
       ],
       timetable: "/images/artists/mixed.webp",
     }
