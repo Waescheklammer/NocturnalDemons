@@ -12,6 +12,8 @@ import { events } from "../../../data/eventinfo/Event";
 import { ContentText } from "../../../components/ContentText";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { ScrollButton } from "../../../components/ScrollButton";
+import LaunchIcon from "@mui/icons-material/Launch";
+import ImageViewer from "react-simple-image-viewer";
 
 const DetailsLink = styled(Link)(({ theme }) => ({
   color: theme.palette.secondary.light,
@@ -29,7 +31,21 @@ export const Details = () => {
   const matchesPhone = useMediaQuery("(max-width:600px)");
   const matchesTablet = useMediaQuery("(max-width:810px)");
 
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const images = lineUpData.stages.map(stage => stage.timetable)
+
   changeBgc(theme.palette.secondary.main);
+
+  const openImageViewer = useCallback((index: number) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
 
   return (
     <Box
@@ -114,6 +130,9 @@ export const Details = () => {
             <ContentText variant={"h5"} sx={{ mb: "2.5em" }}>
               {events.timeStart} - {events.timeEnd}
             </ContentText>
+            <ContentText variant={"h5"} sx={{ mb: "1em" }}>
+              18+
+            </ContentText>
             <ContentText
               variant={"h4"}
               sx={{
@@ -154,21 +173,78 @@ export const Details = () => {
             >
               {t("lineup")}
             </ContentText>
-            {lineUpData.stages.map((stage) => (
+            {lineUpData.stages.map((stage, index) => (
               <Box key={stage.name}>
                 <ContentText
-                  variant={"h6"}
-                  sx={{ mb: "0.5em", mt: "0.5em", color: !matchesPhone ? "#901317" : "#512D75" }}
+                    variant={"h6"}
+                    sx={{
+                      mb: "0.5em",
+                      mt: "0.5em",
+                      color: !matchesPhone ? "#901317" : "#512D75",
+                      textAlign: "center",
+                      mx: "auto",
+                      pl: "5em",
+                    }}
                 >
                   {stage.name} Floor
                 </ContentText>
+                <ContentText
+                  variant={"subtitle1"}
+                  sx={{
+                    mb: "0.5em",
+                    mt: "0.5em",
+                    color: !matchesPhone ? "primary.dark" : "#512D75",
+                    textAlign: "center",
+                    width: "10em",
+                    mx: "auto",
+                    pl: "5em",
+                    "&:hover": {
+                      cursor: "pointer"
+                    }
+                  }}
+                  onClick={() => openImageViewer(index)}
+                >
+                  <Grid container>
+                    <Grid item xs={8}>
+                      {t("timetable")}
+                    </Grid>
+                    <Grid item xs={1}>
+                      <LaunchIcon></LaunchIcon>
+                    </Grid>
+                  </Grid>
+                </ContentText>
+                {isViewerOpen && (
+                    <ImageViewer
+                        src={images}
+                        currentIndex={currentImage}
+                        disableScroll={false}
+                        closeOnClickOutside={true}
+                        onClose={closeImageViewer}
+                    />
+                )}
                 {stage.acts.map((act) => (
                   <Grid
                     container
                     sx={{ width: "50%", mx: "auto" }}
                     key={act.name}
                   >
-                    <Grid item xs={12}>
+                    <Grid item xs={8}>
+                      <ContentText
+                        variant={
+                          lineUpData.headliners.includes(act.name)
+                            ? "subtitle1"
+                            : "subtitle2"
+                        }
+                        sx={{
+                          fontWeight: lineUpData.headliners.includes(act.name)
+                            ? "bold"
+                            : "normal",
+                        }}
+                      >
+                        {act.time}
+                      </ContentText>
+                    </Grid>
+                    <Grid item xs={4}>
                       <ContentText
                         variant={
                           lineUpData.headliners.includes(act.name)
