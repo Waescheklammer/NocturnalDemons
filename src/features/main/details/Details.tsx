@@ -183,7 +183,6 @@ export const Details = () => {
                       color: !matchesPhone ? "#901317" : "#512D75",
                       textAlign: "center",
                       mx: "auto",
-                      pl: "5em",
                     }}
                 >
                   {stage.name} Floor
@@ -197,7 +196,6 @@ export const Details = () => {
                     textAlign: "center",
                     width: "10em",
                     mx: "auto",
-                    pl: "5em",
                     "&:hover": {
                       cursor: "pointer"
                     }
@@ -225,10 +223,10 @@ export const Details = () => {
                 {stage.acts.map((act) => (
                   <Grid
                     container
-                    sx={{ width: "50%", mx: "auto" }}
+                    sx={{ width: "60%", mx: "auto" }}
                     key={act.name}
                   >
-                    <Grid item xs={8}>
+                    <Grid item xs={4}>
                       <ContentText
                         variant={
                           lineUpData.headliners.includes(act.name)
@@ -244,7 +242,7 @@ export const Details = () => {
                         {act.time}
                       </ContentText>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={8}>
                       <ContentText
                         variant={
                           lineUpData.headliners.includes(act.name)
