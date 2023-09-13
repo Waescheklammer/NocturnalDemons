@@ -116,7 +116,7 @@ export const Details = () => {
                 color: !matchesPhone ? "primary.main" : "#883CC0",
               }}
             >
-              {events.name}
+              {events.name} 18+
             </ContentText>
             <ContentText variant={"h6"} sx={{ mb: "1em" }}>
               {events.genre}
@@ -129,9 +129,6 @@ export const Details = () => {
             </ContentText>
             <ContentText variant={"h5"} sx={{ mb: "2.5em" }}>
               {events.timeStart} - {events.timeEnd}
-            </ContentText>
-            <ContentText variant={"h5"} sx={{ mb: "1em" }}>
-              18+
             </ContentText>
             <ContentText
               variant={"h4"}
