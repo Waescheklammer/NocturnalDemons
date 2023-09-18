@@ -24,6 +24,8 @@ export const deCommon = {
     genre: "| Trommelbassmusik | Techno |",
     tickets: "Tickets",
     info: "Info",
+    lastEvent: "Letztes Event: Abyss 16.09.23",
+    seeya: "Es kommt mehr.",
   },
   location: {
     location: "Nächster Ort",

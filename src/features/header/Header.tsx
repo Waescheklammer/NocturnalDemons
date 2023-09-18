@@ -3,7 +3,7 @@ import {
   Grid,
   MenuItem,
   SelectChangeEvent,
-  Toolbar,
+  Toolbar, Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -73,9 +73,9 @@ export const Header = () => {
             {isDetails ? (
               <NavigationLink title={t("home")} link={"/"} />
             ) : (
-              <NavigationLink title={t("details")} link={"details"} />
+              <Typography variant={"h5"} sx={{color: "grey"}}>{t("details")}</Typography>
             )}
-            <NavigationLink title={t("tickets")} link={events.ticketLink} />
+            <Typography variant={"h5"} sx={{color: "grey"}}>{t("tickets")}</Typography>
           </Grid>
           <Grid item xs={2}>
             <Link

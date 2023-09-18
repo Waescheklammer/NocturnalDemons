@@ -45,7 +45,28 @@ export const Events = () => {
         minHeight: matchesPhone ? "100vh" : "80vh",
       }}
     >
-      <Grid container>
+        {matchesPhone &&
+            (<img
+                src={"/images/logo/logo.webp"}
+                alt={"Nocturnal Demons"}
+                style={{
+                    width: "70%",
+                    marginTop: "5em",
+                    height: "30vh",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                }}
+            />)}
+        <Box sx={{pt: "10em"}}>
+            <ContentText variant={"h4"} sx={{mb: "2em"}}>{t("lastEvent")}</ContentText>
+            <ContentText variant={"h4"}>{t("seeya")}</ContentText>
+        </Box>
+    </Box>
+  );
+};
+
+/*
+<Grid container>
         {!matchesPhone ? (
           <Grid item xs={12} md={6}>
             <img
@@ -102,14 +123,6 @@ export const Events = () => {
                     {"| " + events.genre + " |"}
                 </ContentText>
             </Grid>
-              <Grid item xs={12}>
-                  <ContentText
-                      variant={matchesBig ? "h4" : "h5"}
-                      sx={{ mt: "2em", color: fontColor, mb: "1em" }}
-                  >
-                      {countdown}
-                  </ContentText>
-              </Grid>
               {matchesPhone && (
               <Grid item xs={12}>
                 <ContentText
@@ -170,6 +183,4 @@ export const Events = () => {
           </Grid>
         </Grid>
       </Grid>
-    </Box>
-  );
-};
+ */

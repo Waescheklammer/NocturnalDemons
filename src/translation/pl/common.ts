@@ -24,6 +24,8 @@ export const plCommon = {
     genre: "| Drum n Bass | Techno |",
     tickets: "Bilety",
     info: "Informacje",
+    lastEvent: "Ostatnie wydarzenie: Abyss 16.09.23",
+    seeya: "Nadchodzi więcej.",
   },
   location: {
     location: "Next Location",

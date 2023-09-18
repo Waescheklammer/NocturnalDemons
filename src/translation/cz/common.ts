@@ -24,6 +24,8 @@ export const czCommon = {
     genre: "| Drum n Bass | Techno |",
     tickets: "Vstupenky",
     info: "O nás",
+    lastEvent: "Poslední událost: 16.09.23",
+    seeya: "Další se chystají.",
   },
   location: {
     location: "Next Location",

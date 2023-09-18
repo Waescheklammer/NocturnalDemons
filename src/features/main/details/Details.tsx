@@ -124,10 +124,10 @@ export const Details = () => {
             <ContentText variant={"h6"} sx={{ mb: "2.5em" }}>
               26 DJs
             </ContentText>
-            <ContentText variant={"h5"} sx={{ mb: "1em" }}>
+            <ContentText variant={"h5"} sx={{ mb: "1em", fontWeight: "bolder" }}>
               {events.date}
             </ContentText>
-            <ContentText variant={"h5"} sx={{ mb: "2.5em" }}>
+            <ContentText variant={"h5"} sx={{ mb: "2.5em", fontWeight: "bolder"  }}>
               {events.timeStart} - {events.timeEnd}
             </ContentText>
             <ContentText

@@ -24,6 +24,8 @@ export const enCommon = {
     genre: "| Drum n Bass | Techno |",
     tickets: "Tickets",
     info: "Info",
+    lastEvent: "Last event: Abyss 16.09.23",
+    seeya: "More is coming.",
   },
   location: {
     location: "Next Location",
