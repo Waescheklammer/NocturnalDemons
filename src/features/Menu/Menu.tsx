@@ -107,35 +107,65 @@ export const Menu = () => {
         </Grid>
         {items.map((item) => (
           <MenuItem item key={item.title}>
-            <Link
-              href={item.link}
-              sx={{
-                textDecoration: "none",
-                textTransform: "uppercase",
-                color: "secondary.main",
-                display: "flex",
-                flexDirection: "row",
-                width: "100%",
-                "&:active": {
-                  color: "secondary.light",
-                },
-              }}
-              onClick={() => handleRouting(item.link)}
-            >
-              <Typography
-                sx={{
-                  fontWeight: "bold",
-                  flex: "3",
-                  textAlign: "left",
-                  pl: "3em",
-                }}
-              >
-                {t(item.title)}
-              </Typography>
-              <Typography sx={{ fontWeight: "bold", flex: "1" }}>
-                {">"}
-              </Typography>
-            </Link>
+            {item.title === "tickets" || item.title === "event" ? (
+                <Box
+                    sx={{
+                      textDecoration: "none",
+                      textTransform: "uppercase",
+                      color: "grey",
+                      display: "flex",
+                      flexDirection: "row",
+                      width: "100%",
+                      "&:active": {
+                        color: "secondary.light",
+                      },
+                    }}
+                >
+                  <Typography
+                      sx={{
+                        fontWeight: "bold",
+                        flex: "3",
+                        textAlign: "left",
+                        pl: "3em",
+                      }}
+                  >
+                    {t(item.title)}
+                  </Typography>
+                  <Typography sx={{ fontWeight: "bold", flex: "1" }}>
+                    {">"}
+                  </Typography>
+                </Box>
+            ) : (
+                <Link
+                    href={item.link}
+                    sx={{
+                      textDecoration: "none",
+                      textTransform: "uppercase",
+                      color: "secondary.main",
+                      display: "flex",
+                      flexDirection: "row",
+                      width: "100%",
+                      "&:active": {
+                        color: "secondary.light",
+                      },
+                    }}
+                    onClick={() => handleRouting(item.link)}
+                >
+                  <Typography
+                      sx={{
+                        fontWeight: "bold",
+                        flex: "3",
+                        textAlign: "left",
+                        pl: "3em",
+                      }}
+                  >
+                    {t(item.title)}
+                  </Typography>
+                  <Typography sx={{ fontWeight: "bold", flex: "1" }}>
+                    {">"}
+                  </Typography>
+                </Link>
+            )}
           </MenuItem>
         ))}
         <Grid item sx={{ py: "1em", backgroundColor: "secondary.main" }}>
