@@ -4,12 +4,24 @@ import { changeBgc } from "../../../util/utils";
 import { ContentText } from "../../../components/ContentText";
 import { ScrollButton } from "../../../components/ScrollButton";
 import MasonryImageList from "../../../components/MasonryImageList";
+import {useParams} from "react-router-dom";
 
 export const Gallery = () => {
   const theme = useTheme();
   const matches = useMediaQuery("(max-width:1000px)");
-  const [eventSelected, setEventSelected] = useState("KÜHLHAUS");
-  const [imgSelection, setImgSelection] = useState(imgData);
+  const {event} = useParams();
+  const getParameterEvent = (eventName: string | undefined) => {
+    if(eventName === "kühlhaus") {
+      return imgData
+    }
+    if(eventName === "abyss") {
+      return imgDataAbyss()
+    }
+    return imgData
+  }
+
+  const [eventSelected, setEventSelected] = useState(event);
+  const [imgSelection, setImgSelection] = useState(getParameterEvent(event));
 
   changeBgc(theme.palette.secondary.main);
 
@@ -20,6 +32,7 @@ export const Gallery = () => {
     setImgSelection(data);
     setEventSelected(title);
   };
+
 
   return (
     <>

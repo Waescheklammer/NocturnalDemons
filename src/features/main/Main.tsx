@@ -14,7 +14,7 @@ export const Main = () => {
       <Routes>
         <Route path="/" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/:event" element={<Gallery />} />
         <Route path="/imprint" element={<Imprint />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/details" element={<Details />} />

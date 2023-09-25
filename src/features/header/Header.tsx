@@ -32,7 +32,7 @@ export const Header = () => {
   useEffect(() => {
     setIsDetails(
       location.pathname === "/details" ||
-        location.pathname === "/gallery" ||
+        location.pathname === "/gallery/kuhlhaus" ||
         location.pathname === "/privacy" ||
         location.pathname === "/imprint"
     );
@@ -73,9 +73,21 @@ export const Header = () => {
             {isDetails ? (
               <NavigationLink title={t("home")} link={"/"} />
             ) : (
-              <Typography variant={"h5"} sx={{color: "grey"}}>{t("details")}</Typography>
+                <Box sx={{
+                  py: "0.5em",
+                  textTransform: "uppercase",
+                  borderBottom: "1px solid transparent",
+                }}>
+                  <Typography variant={"h5"} sx={{color: "grey"}}>{t("details")}</Typography>
+                </Box>
             )}
+          <Box sx={{
+            py: "0.5em",
+            textTransform: "uppercase",
+            borderBottom: "1px solid transparent",
+          }}>
             <Typography variant={"h5"} sx={{color: "grey"}}>{t("tickets")}</Typography>
+          </Box>
           </Grid>
           <Grid item xs={2}>
             <Link
@@ -113,7 +125,7 @@ export const Header = () => {
           >
             <NavigationLink
               title={t("gallery")}
-              link={"/gallery"}
+              link={"/gallery/kuhlhaus"}
               sx={{ ml: matchesPhone ? "2em" : "0em" }}
             />
             <NavigationLink title={t("info")} link={"/contact"} />

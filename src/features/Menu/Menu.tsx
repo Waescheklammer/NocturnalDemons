@@ -40,7 +40,7 @@ export const Menu = () => {
     { title: "event", link: "/details" },
     { title: "tickets", link: events.ticketLink },
     { title: "info", link: "/contact" },
-    { title: "gallery", link: "/gallery" },
+    { title: "gallery", link: "/gallery/kuhlhaus" },
     { title: "privacy", link: "/privacy" },
     { title: "imprint", link: "/imprint" },
   ];
