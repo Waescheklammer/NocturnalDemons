@@ -52,10 +52,10 @@ export const Gallery = () => {
                       color: event.disabled
                         ? "grey"
                         : eventSelected === event.title
-                        ? "primary.main"
+                        ? event.color
                         : "secondary.light",
                       "&:hover": {
-                        color: event.disabled ? "grey" : "primary.main",
+                        color: event.disabled ? "grey" : event.color,
                         cursor: event.disabled ? "default" : "pointer",
                       },
                     }}
@@ -78,7 +78,7 @@ export const Gallery = () => {
         </Grid>
         <Grid item md={10} xs={12}>
           <MasonryImageList
-            imgData={shuffleArray(imgSelection)}
+            imgData={imgSelection}
           ></MasonryImageList>
         </Grid>
       </Grid>
@@ -220,17 +220,26 @@ const imgData = [
   },
 ];
 
+const imgDataAbyss = () => {
+  let data = []
+  for (let i = 1; i <= 74; i++) {
+    data.push({img: `/images/gallery/Abyss/${i}.webp`, title: "Bed"})
+  }
+  return data
+}
 const eventList = [
   {
     title: "KÜHLHAUS",
     date: "03.23",
     data: imgData,
     disabled: false,
+    color: "primary.main"
   },
   {
     title: "ABYSS",
     date: "09.23",
-    data: undefined,
-    disabled: true,
+    data: imgDataAbyss(),
+    disabled: false,
+    color: "purple"
   },
 ];
