@@ -16,6 +16,7 @@ import { events } from "../../data/eventinfo/Event";
 import i18n from "../../i18n";
 import Select from "@mui/material/Select";
 import { Lang } from "../../data/enums/Lang";
+import {GlitchTypography} from "../../components/GlitchTypography";
 
 export const Header = () => {
   const { t } = useTranslation("links");
@@ -78,7 +79,7 @@ export const Header = () => {
                   textTransform: "uppercase",
                   borderBottom: "1px solid transparent",
                 }}>
-                  <Typography variant={"h5"} sx={{color: "grey"}}>{t("details")}</Typography>
+                  <NavigationLink title={t("details")} link={"/details"} />
                 </Box>
             )}
           <Box sx={{
@@ -86,7 +87,19 @@ export const Header = () => {
             textTransform: "uppercase",
             borderBottom: "1px solid transparent",
           }}>
-            <Typography variant={"h5"} sx={{color: "grey"}}>{t("tickets")}</Typography>
+            <Box
+                sx={{
+                  "&:hover": {
+                    cursor: "pointer",
+                  },
+                  py: "0.5em",
+                  textTransform: "uppercase",
+                  borderBottom: "1px solid transparent",
+                  color: "white",
+                }}
+            >
+              <Typography variant={"h5"} sx={{color: "grey"}}>{t("tickets")}</Typography>
+            </Box>
           </Box>
           </Grid>
           <Grid item xs={2}>

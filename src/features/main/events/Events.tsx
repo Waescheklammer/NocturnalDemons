@@ -45,25 +45,107 @@ export const Events = () => {
         minHeight: matchesPhone ? "100vh" : "80vh",
       }}
     >
-        {matchesPhone &&
-            (<img
-                src={"/images/logo/logo.webp"}
-                alt={"Nocturnal Demons"}
-                style={{
-                    width: "70%",
-                    marginTop: "5em",
-                    height: "30vh",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                }}
-            />)}
-        <Box sx={{pt: "4em"}}>
-            <ContentText variant={"h5"} sx={{mb: "1em"}}>{t("nextEvent")}</ContentText>
-            <ContentText variant={"h3"} sx={{mb: "1em", color: "primary.main"}}>{events.name}</ContentText>
-            <ContentText variant={"h3"} sx={{mb: "1em", color: "primary.main"}}>{events.date}</ContentText>
-            <ContentText variant={"h5"} sx={{mb: "1em"}}>{events.genre}</ContentText>
-            <ContentText variant={"h5"} sx={{mb: "1em"}}>{events.locationFull}</ContentText>
-        </Box>
+        <Grid container>
+            {!matchesPhone ? (
+                <Grid item xs={12} md={6}>
+                    <img
+                        src={events.imgCover}
+                        alt={"Nocturnal Demons"}
+                        style={{ width: "100%", height: "100%", minHeight: "80vh" }}
+                    />
+                </Grid>
+            ) : (
+                <img
+                    src={"/images/logo/logo.webp"}
+                    alt={"Nocturnal Demons"}
+                    style={{
+                        width: "70%",
+                        marginTop: "5em",
+                        height: "30vh",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                    }}
+                />
+            )}
+            <Grid item xs={12} md={6}>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <ContentText
+                            variant={matchesPhone ? "h2" : matchesBig ? "h2" : "h3"}
+                            sx={{
+                                mt: matchesBig ? "4em" : "1em",
+                                borderTop: "2px solid " + fontColor,
+                                borderBottom: "2px solid " + fontColor,
+                                color: "primary.main",
+                            }}
+                        >
+                            {events.name}
+                        </ContentText>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ContentText
+                            variant={matchesBig ? "h2" : "h3"}
+                            sx={{ mt: "1em", color: fontColor }}
+                        >
+                            {events.date}
+                        </ContentText>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ContentText
+                            variant={"h6"}
+                            sx={{ mt: "1em", color: fontColor }}
+                        >
+                            {events.locationShort}
+                        </ContentText>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ContentText
+                            variant={"h6"}
+                            sx={{ mt: "0.5em", color: fontColor }}
+                        >
+                            {"| " + events.genre + " |"}
+                        </ContentText>
+                    </Grid>
+                    {matchesPhone && (
+                        <Grid item xs={12}>
+                            <ContentText
+                                variant={"h6"}
+                                sx={{ mt: "2em", color: fontColor }}
+                            >
+                                {events.locationShort}
+                            </ContentText>
+                        </Grid>
+                    )}
+                    <Grid item xs={12}>
+                        <Box
+                            sx={{
+                                width: "13em",
+                                mx: "auto",
+                                mt: matchesBig ? "2em" : "4em",
+                                mb: "4em",
+                            }}
+                        >
+                            <GlitchTypography>
+                                <RouterLink to={"details"}>
+                                    <ContentButton
+                                        sx={{
+                                            color: fontColor,
+                                            border: matchesPhone
+                                                ? "2px solid" + fontColor
+                                                : "1px solid" + fontColor,
+                                        }}
+                                        size={matchesBig ? "large" : "medium"}
+                                        variant={"outlined"}
+                                    >
+                                        {t("info")}
+                                    </ContentButton>
+                                </RouterLink>
+                            </GlitchTypography>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
     </Box>
   );
 };

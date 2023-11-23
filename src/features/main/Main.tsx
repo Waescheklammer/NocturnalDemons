@@ -10,7 +10,7 @@ import { Details } from "./details/Details";
 
 export const Main = () => {
   return (
-    <Box sx={{ minHeight: "86vh" }}>
+    <Box sx={{ minHeight: "86vh"}}>
       <Routes>
         <Route path="/" element={<Events />} />
         <Route path="/contact" element={<Contact />} />

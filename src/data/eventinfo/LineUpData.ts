@@ -4,122 +4,45 @@ export const lineUpData: LineUp = {
   headliners: ["Cockroach", "PRDK", "BEAST:FREQNZ", "Bounty 3000", "DARK VISION"],
   stages: [
     {
-      name: "Neurofunk",
+      name: "DnB",
       acts: [
         {
-          name: "Aven",
+          name: "B ON RAVE",
           time: "22:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "DIZZYDOSE B2B TERRIFYING",
+          name: "DROPZ",
           time: "23:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "Cockroach",
+          name: "MARKO B2B TOTO",
           time: "00:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "PRDK",
+          name: "AUBI",
           time: "01:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "BEAST:FREQNZ",
+          name: "EXPLOZE",
           time: "02:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "B-HAT",
+          name: "ARES",
           time: "03:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "TOTO b2b MARKO",
+          name: "OPTIMIZ3D",
           time: "04:00",
-          genre: "Neurofunk DnB",
-        },
-        {
-          name: "KEON",
-          time: "05:00",
-          genre: "Neurofunk DnB",
-        },
-        {
-          name: "Dropz",
-          time: "06:00",
           genre: "Neurofunk DnB",
         },
       ],
       timetable: "/images/artists/neuro.webp",
-    },
-    {
-      name: "Techno",
-      acts: [
-        {
-          name : "Zeremonienmeister",
-          time: "22:00",
-          genre: "Techno"
-        },
-        {
-          name : "DARK VISION",
-          time: "23:00",
-          genre: "Techno"
-        },
-        {
-          name : "YANA",
-          time: "01:00",
-          genre: "Techno"
-        },
-        {
-          name : "Bounty 3000",
-          time: "02:00",
-          genre: "Techno"
-        },
-        {
-          name : "DO NOT DISTURB",
-          time: "03:00",
-          genre: "Techno"
-        },
-        {
-          name : "Schwizzynator",
-          time: "05:00",
-          genre: "Techno"
-        }
-      ],
-      timetable: "http://localhost:3000/images/artists/techno.webp",
-    },
-    {
-      name: "Mixed",
-      acts: [
-        {
-          name: "DO:IT",
-          time: "22:00",
-          genre: "DnB"
-        },
-        {
-          name: "J-COP",
-          time: "23:30",
-          genre: "DnB",
-        },
-        {
-          name: "DYS:KO",
-          time: "01:00",
-          genre: "DnB"
-        },
-        {
-          name: "AUBI",
-          time: "02:30",
-          genre: "DnB",
-        },
-        {
-          name: "Hefty Mess Showcase",
-          time: "04:00",
-          genre: "DnB",
-        }
-      ],
-      timetable: "/images/artists/mixed.webp",
     }
   ],
 };

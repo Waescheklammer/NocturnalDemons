@@ -58,21 +58,10 @@ export const Details = () => {
       {!matchesPhone && <ScrollButton></ScrollButton>}
       <Box sx={{ mb: "3em" }}>
         {matchesPhone ? (
-          <img
-            src={events.imgPromo}
-            alt={"Nocturnal Demons"}
-            style={{
-              width: "100%",
-              height: "70vh",
-              marginTop: "15vh",
-              marginBottom: "15vh",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          />
+          <></>
         ) : (
           <img
-            src={events.imgCover}
+            src={events.imgPromo}
             alt={"Nocturnal Demons"}
             style={{
               width: "100%",
@@ -83,22 +72,7 @@ export const Details = () => {
           />
         )}
       </Box>
-      <Box sx={{ mb: "5em", maxWidth: "25em", mx: "auto" }}>
-        <Link to={events.ticketLink}>
-          <GlitchTypography>
-            <ContentButton
-              sx={{
-                fontWeight: "bolder",
-                width: matchesPhone ? "15em" : "25em",
-              }}
-              size={"large"}
-              variant={"outlined"}
-            >
-              {t("tickets")}
-            </ContentButton>
-          </GlitchTypography>
-        </Link>
-      </Box>
+
       <Box
         sx={{
           mx: matchesPhone ? "1em" : "5em",
@@ -113,16 +87,13 @@ export const Details = () => {
               variant={"h4"}
               sx={{
                 mb: "0.5em",
-                color: !matchesPhone ? "primary.main" : "#883CC0",
+                color: !matchesPhone ? "#69CDFF" : "#69CDFF",
               }}
             >
               {events.name} 18+
             </ContentText>
             <ContentText variant={"h6"} sx={{ mb: "1em" }}>
               {events.genre}
-            </ContentText>
-            <ContentText variant={"h6"} sx={{ mb: "2.5em" }}>
-              26 DJs
             </ContentText>
             <ContentText variant={"h5"} sx={{ mb: "1em", fontWeight: "bolder" }}>
               {events.date}
@@ -134,7 +105,7 @@ export const Details = () => {
               variant={"h4"}
               sx={{
                 mb: "1em",
-                color: !matchesPhone ? "primary.main" : "#883CC0",
+                color: !matchesPhone ? "#69CDFF" : "#69CDFF",
               }}
             >
               {t("location")}
@@ -165,7 +136,7 @@ export const Details = () => {
               variant={"h4"}
               sx={{
                 mb: "0.5em",
-                color: !matchesPhone ? "primary.main" : "#883CC0",
+                color: !matchesPhone ? "#69CDFF" : "#69CDFF",
               }}
             >
               {t("lineup")}
@@ -177,37 +148,14 @@ export const Details = () => {
                     sx={{
                       mb: "0.5em",
                       mt: "0.5em",
-                      color: !matchesPhone ? "#901317" : "#512D75",
+                      color: !matchesPhone ? "#69CDFF" : "#69CDFF",
                       textAlign: "center",
                       mx: "auto",
                     }}
                 >
                   {stage.name} Floor
                 </ContentText>
-                <ContentText
-                  variant={"subtitle1"}
-                  sx={{
-                    mb: "0.5em",
-                    mt: "0.5em",
-                    color: !matchesPhone ? "primary.dark" : "#512D75",
-                    textAlign: "center",
-                    width: "10em",
-                    mx: "auto",
-                    "&:hover": {
-                      cursor: "pointer"
-                    }
-                  }}
-                  onClick={() => openImageViewer(index)}
-                >
-                  <Grid container>
-                    <Grid item xs={8}>
-                      {t("timetable")}
-                    </Grid>
-                    <Grid item xs={1}>
-                      <LaunchIcon></LaunchIcon>
-                    </Grid>
-                  </Grid>
-                </ContentText>
+
                 {isViewerOpen && (
                     <ImageViewer
                         src={images}
@@ -262,13 +210,61 @@ export const Details = () => {
           </Grid>
         </Grid>
       </Box>
-      <ContentText
-        sx={{ color: !matchesPhone ? "primary.main" : "#883CC0", mb: "2em" }}
+    </Box>
+  );
+};
+
+/*
+<ContentText
+                  variant={"subtitle1"}
+                  sx={{
+                    mb: "0.5em",
+                    mt: "0.5em",
+                    color: !matchesPhone ? "#69CDFF" : "#69CDFF",
+                    textAlign: "center",
+                    width: "10em",
+                    mx: "auto",
+                    "&:hover": {
+                      cursor: "pointer"
+                    }
+                  }}
+                  onClick={() => openImageViewer(index)}
+                >
+                  <Grid container>
+                    <Grid item xs={8}>
+                      {t("timetable")}
+                    </Grid>
+                    <Grid item xs={1}>
+                      <LaunchIcon></LaunchIcon>
+                    </Grid>
+                  </Grid>
+                </ContentText>
+
+<Box sx={{ mb: "5em", maxWidth: "25em", mx: "auto" }}>
+        <Link to={events.ticketLink}>
+          <GlitchTypography>
+            <ContentButton
+              sx={{
+                fontWeight: "bolder",
+                width: matchesPhone ? "15em" : "25em",
+              }}
+              size={"large"}
+              variant={"outlined"}
+            >
+              {t("tickets")}
+            </ContentButton>
+          </GlitchTypography>
+        </Link>
+      </Box>
+
+
+<ContentText
+        sx={{ color: !matchesPhone ? "primary.main" : "#69CDFF", mb: "2em" }}
         variant={"h4"}
       >
         {t("acts")}
       </ContentText>
-      <Box>
+<Box>
         <Grid
           container
           sx={{ justifyContent: "center", gap: "2em", mb: "5em" }}
@@ -281,7 +277,7 @@ export const Details = () => {
               key={id}
               sx={{
                 border: "1px solid",
-                borderColor: !matchesPhone ? "primary.dark" : "#883CC0",
+                borderColor: !matchesPhone ? "primary.dark" : "#69CDFF",
                 minHeight: "250px",
               }}
             >
@@ -327,6 +323,4 @@ export const Details = () => {
           ))}
         </Grid>
       </Box>
-    </Box>
-  );
-};
+ */

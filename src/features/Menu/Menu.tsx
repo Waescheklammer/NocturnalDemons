@@ -107,7 +107,7 @@ export const Menu = () => {
         </Grid>
         {items.map((item) => (
           <MenuItem item key={item.title}>
-            {item.title === "tickets" || item.title === "event" ? (
+            {item.title === "tickets" ? (
                 <Box
                     sx={{
                       textDecoration: "none",
