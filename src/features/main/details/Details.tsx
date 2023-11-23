@@ -90,7 +90,7 @@ export const Details = () => {
                 color: !matchesPhone ? "#69CDFF" : "#69CDFF",
               }}
             >
-              {events.name} 18+
+              {events.name}
             </ContentText>
             <ContentText variant={"h6"} sx={{ mb: "1em" }}>
               {events.genre}
