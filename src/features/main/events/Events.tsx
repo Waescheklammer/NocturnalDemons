@@ -57,9 +57,12 @@ export const Events = () => {
                     marginRight: "auto",
                 }}
             />)}
-        <Box sx={{pt: "10em"}}>
-            <ContentText variant={"h4"} sx={{mb: "2em"}}>{t("lastEvent")}</ContentText>
-            <ContentText variant={"h4"}>{t("seeya")}</ContentText>
+        <Box sx={{pt: "4em"}}>
+            <ContentText variant={"h5"} sx={{mb: "1em"}}>{t("nextEvent")}</ContentText>
+            <ContentText variant={"h3"} sx={{mb: "1em", color: "primary.main"}}>{events.name}</ContentText>
+            <ContentText variant={"h3"} sx={{mb: "1em", color: "primary.main"}}>{events.date}</ContentText>
+            <ContentText variant={"h5"} sx={{mb: "1em"}}>{events.genre}</ContentText>
+            <ContentText variant={"h5"} sx={{mb: "1em"}}>{events.locationFull}</ContentText>
         </Box>
     </Box>
   );

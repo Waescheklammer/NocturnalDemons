@@ -38,7 +38,7 @@ export const Gallery = () => {
     <>
       {!matches && <ScrollButton></ScrollButton>}
       <Grid container sx={{ pt: "4em", pr: "1em", pl: matches ? "1em" : null }}>
-        <Grid item md={2} xs={12}>
+        <Grid item md={3} xs={12}>
           <Box
             sx={{
               position: !matches ? "fixed" : "relative",
@@ -75,7 +75,7 @@ export const Gallery = () => {
                   >
                     <Grid
                       item
-                      sx={{ textAlign: "left", minWidth: "6em" }}
+                      sx={{ textAlign: "left", minWidth: "7em" }}
                       component={"span"}
                     >
                       {event.title}
@@ -89,7 +89,7 @@ export const Gallery = () => {
             ))}
           </Box>
         </Grid>
-        <Grid item md={10} xs={12}>
+        <Grid item md={9} xs={12}>
           <MasonryImageList
             imgData={imgSelection}
           ></MasonryImageList>
@@ -254,5 +254,12 @@ const eventList = [
     data: imgDataAbyss(),
     disabled: false,
     color: "purple"
+  },
+  {
+    title: "CHRISTMAS",
+    date: "12.23",
+    data: imgData,
+    disabled: true,
+    color: "primary.main"
   },
 ];

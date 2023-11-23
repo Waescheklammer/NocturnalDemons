@@ -26,6 +26,7 @@ export const plCommon = {
     info: "Informacje",
     lastEvent: "Ostatnie wydarzenie: Abyss 16.09.23",
     seeya: "Nadchodzi więcej.",
+    nextEvent: "następne wydarzenie"
   },
   location: {
     location: "Next Location",

@@ -26,6 +26,7 @@ export const czCommon = {
     info: "O nás",
     lastEvent: "Poslední událost: 16.09.23",
     seeya: "Další se chystají.",
+    nextEvent: "další událost"
   },
   location: {
     location: "Next Location",
