@@ -26,7 +26,8 @@ export const plCommon = {
     info: "Informacje",
     lastEvent: "Ostatnie wydarzenie: Abyss 16.09.23",
     seeya: "Nadchodzi więcej.",
-    nextEvent: "następne wydarzenie"
+    nextEvent: "następne wydarzenie",
+    advanceBooking: "Brak wcześniejszej rezerwacji i sprzedaży online",
   },
   location: {
     location: "Next Location",

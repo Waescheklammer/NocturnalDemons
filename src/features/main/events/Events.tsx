@@ -143,6 +143,14 @@ export const Events = () => {
                             </GlitchTypography>
                         </Box>
                     </Grid>
+                    <Grid item xs={12}>
+                        <ContentText
+                            variant={"subtitle2"}
+                            sx={{ mt: "1em", mb: "2em", color: fontColor }}
+                        >
+                            {t('advanceBooking')}
+                        </ContentText>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

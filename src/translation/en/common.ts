@@ -26,7 +26,8 @@ export const enCommon = {
     info: "Info",
     lastEvent: "Last event: Abyss 16.09.23",
     seeya: "More is coming.",
-    nextEvent: "Next Event"
+    nextEvent: "Next Event",
+    advanceBooking: "No advance booking and online sale",
   },
   location: {
     location: "Next Location",
