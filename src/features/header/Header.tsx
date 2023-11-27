@@ -3,7 +3,8 @@ import {
   Grid,
   MenuItem,
   SelectChangeEvent,
-  Toolbar, Typography,
+  Toolbar,
+  Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -16,7 +17,7 @@ import { events } from "../../data/eventinfo/Event";
 import i18n from "../../i18n";
 import Select from "@mui/material/Select";
 import { Lang } from "../../data/enums/Lang";
-import {GlitchTypography} from "../../components/GlitchTypography";
+import { GlitchTypography } from "../../components/GlitchTypography";
 
 export const Header = () => {
   const { t } = useTranslation("links");
@@ -72,22 +73,34 @@ export const Header = () => {
               />
             )}
             {isDetails ? (
-              <NavigationLink title={t("home")} link={"/"} />
-            ) : (
-                <Box sx={{
+              <Box
+                sx={{
                   py: "0.5em",
                   textTransform: "uppercase",
                   borderBottom: "1px solid transparent",
-                }}>
-                  <NavigationLink title={t("details")} link={"/details"} />
-                </Box>
+                }}
+              >
+                <NavigationLink title={t("home")} link={"/"} />
+              </Box>
+            ) : (
+              <Box
+                sx={{
+                  py: "0.5em",
+                  textTransform: "uppercase",
+                  borderBottom: "1px solid transparent",
+                }}
+              >
+                <NavigationLink title={t("details")} link={"/details"} />
+              </Box>
             )}
-          <Box sx={{
-            py: "0.5em",
-            textTransform: "uppercase",
-            borderBottom: "1px solid transparent",
-          }}>
             <Box
+              sx={{
+                py: "0.5em",
+                textTransform: "uppercase",
+                borderBottom: "1px solid transparent",
+              }}
+            >
+              <Box
                 sx={{
                   "&:hover": {
                     cursor: "pointer",
@@ -97,10 +110,12 @@ export const Header = () => {
                   borderBottom: "1px solid transparent",
                   color: "white",
                 }}
-            >
-              <Typography variant={"h5"} sx={{color: "grey"}}>{t("tickets")}</Typography>
+              >
+                <Typography variant={"h5"} sx={{ color: "grey" }}>
+                  {t("tickets")}
+                </Typography>
+              </Box>
             </Box>
-          </Box>
           </Grid>
           <Grid item xs={2}>
             <Link
