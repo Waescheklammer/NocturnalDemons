@@ -12,6 +12,6 @@ export const events: EventInfo = {
   ticketLink: "https://nocturnaldemons.ticket.io/#",
   mapLink:
     "https://www.google.com/maps/place/K%C3%BChlhaus+G%C3%B6rlitz/@51.12984,14.9676851,17z/data=!4m6!3m5!1s0x4708de8e4ddfb489:0x55634865db2d3dad!8m2!3d51.12984!4d14.97026!16s%2Fg%2F11b6dpqk96?entry=ttu",
-  imgPromo: "/images/logo/promo.png",
+  imgPromo: "/images/logo/promo.webp",
   imgCover: "/images/logo/kuhlhaus.jpg",
 };
