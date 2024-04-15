@@ -90,7 +90,16 @@ export const Header = () => {
                   borderBottom: "1px solid transparent",
                 }}
               >
-                <NavigationLink title={t("details")} link={"/details"} />
+                  <Box
+                      sx={{
+                          py: "0.5em",
+                          textTransform: "uppercase",
+                          borderBottom: "1px solid transparent",
+                          color: "grey",
+                      }}
+                  >
+                      <Typography variant={"h5"}>{t("details")}</Typography>
+                  </Box>
               </Box>
             )}
             <Box
@@ -102,9 +111,6 @@ export const Header = () => {
             >
               <Box
                 sx={{
-                  "&:hover": {
-                    cursor: "pointer",
-                  },
                   py: "0.5em",
                   textTransform: "uppercase",
                   borderBottom: "1px solid transparent",

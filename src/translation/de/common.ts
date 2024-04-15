@@ -25,7 +25,7 @@ export const deCommon = {
     tickets: "Tickets",
     info: "Info",
     lastEvent: "Nächstes Event: Abyss 16.09.23",
-    seeya: "Es kommt mehr.",
+    seeya: "Aktuell keine Veranstaltungen.",
     nextEvent: "Nächstes Event",
     advanceBooking: "Kein Vorverkauf und Onlineverkauf",
   },
