@@ -98,7 +98,7 @@ export const Header = () => {
                           color: "grey",
                       }}
                   >
-                      <Typography variant={"h5"}>{t("details")}</Typography>
+                      <NavigationLink title={t("details")} link={"/details"} sx={{ ml: matchesPhone ? "2em" : "0em" }}/>
                   </Box>
               </Box>
             )}
@@ -111,13 +111,13 @@ export const Header = () => {
             >
               <Box
                 sx={{
-                  py: "0.5em",
+                  py: "0.2em",
                   textTransform: "uppercase",
                   borderBottom: "1px solid transparent",
                   color: "white",
                 }}
               >
-                <Typography variant={"h5"} sx={{ color: "grey" }}>
+                <Typography variant={"h5"} sx={{ color: "grey", py: "0.5em", }}>
                   {t("tickets")}
                 </Typography>
               </Box>

@@ -13,6 +13,7 @@ export const Main = () => {
     <Box sx={{ minHeight: "86vh"}}>
       <Routes>
         <Route path="/" element={<Events />} />
+        <Route path="/details" element={<Details />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery/:event" element={<Gallery />} />
         <Route path="/imprint" element={<Imprint />} />

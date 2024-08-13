@@ -58,13 +58,26 @@ export const Details = () => {
       {!matchesPhone && <ScrollButton></ScrollButton>}
       <Box sx={{ mb: "3em" }}>
         {matchesPhone ? (
-          <></>
+          <>
+            <img
+                src={events.imgPromo}
+                alt={"Nocturnal Demons"}
+                style={{
+                  width: "100%",
+                  height: matchesTablet ? "74vh" : "80vh",
+                  marginTop: "10vh",
+                  marginBottom: "10vh",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+            />
+          </>
         ) : (
           <img
             src={events.imgPromo}
             alt={"Nocturnal Demons"}
             style={{
-              width: "100%",
+              width: "60%",
               height: matchesTablet ? "94vh" : "80vh",
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -87,7 +100,7 @@ export const Details = () => {
               variant={"h4"}
               sx={{
                 mb: "0.5em",
-                color: !matchesPhone ? "#69CDFF" : "#69CDFF",
+                color: !matchesPhone ? "#E6C229" : "#E6C229",
               }}
             >
               {events.name}
@@ -105,13 +118,21 @@ export const Details = () => {
               variant={"h4"}
               sx={{
                 mb: "1em",
-                color: !matchesPhone ? "#69CDFF" : "#69CDFF",
+                color: !matchesPhone ? "#E6C229" : "#E6C229",
               }}
             >
               {t("location")}
             </ContentText>
             <ContentText variant={"h5"} sx={{ mb: "0.5em" }}>
               {events.locationFull}
+            </ContentText>
+            <ContentText variant={"subtitle2"} sx={{ mb: "3em" }}>
+              {events.address}
+            </ContentText>
+            <ContentText variant={"subtitle2"} sx={{ mb: "3em" }}>
+              22:00 - 00:00 : 13€
+            </ContentText><ContentText variant={"subtitle2"} sx={{ mb: "3em" }}>
+              00:00 - 05:00 : 15€
             </ContentText>
             <ContentText variant={"subtitle2"} sx={{ mb: "3em" }}>
               {events.address}
@@ -136,7 +157,7 @@ export const Details = () => {
               variant={"h4"}
               sx={{
                 mb: "0.5em",
-                color: !matchesPhone ? "#69CDFF" : "#69CDFF",
+                color: !matchesPhone ? "#E6C229" : "#E6C229",
               }}
             >
               {t("lineup")}
@@ -148,7 +169,7 @@ export const Details = () => {
                     sx={{
                       mb: "0.5em",
                       mt: "0.5em",
-                      color: !matchesPhone ? "#69CDFF" : "#69CDFF",
+                      color: !matchesPhone ? "#E6C229" : "#E6C229",
                       textAlign: "center",
                       mx: "auto",
                     }}
@@ -220,7 +241,7 @@ export const Details = () => {
                   sx={{
                     mb: "0.5em",
                     mt: "0.5em",
-                    color: !matchesPhone ? "#69CDFF" : "#69CDFF",
+                    color: !matchesPhone ? "#E6C229" : "#E6C229",
                     textAlign: "center",
                     width: "10em",
                     mx: "auto",
@@ -259,7 +280,7 @@ export const Details = () => {
 
 
 <ContentText
-        sx={{ color: !matchesPhone ? "primary.main" : "#69CDFF", mb: "2em" }}
+        sx={{ color: !matchesPhone ? "primary.main" : "#E6C229", mb: "2em" }}
         variant={"h4"}
       >
         {t("acts")}
@@ -277,7 +298,7 @@ export const Details = () => {
               key={id}
               sx={{
                 border: "1px solid",
-                borderColor: !matchesPhone ? "primary.dark" : "#69CDFF",
+                borderColor: !matchesPhone ? "primary.dark" : "#E6C229",
                 minHeight: "250px",
               }}
             >

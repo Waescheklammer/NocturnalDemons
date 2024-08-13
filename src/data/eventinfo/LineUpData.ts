@@ -1,38 +1,38 @@
 import { LineUp } from "../types/LineUp";
 
 export const lineUpData: LineUp = {
-  headliners: ["Cockroach", "PRDK", "BEAST:FREQNZ", "Bounty 3000", "DARK VISION"],
+  headliners: ["BEA", "DO NOT DISTURB"],
   stages: [
     {
       name: "DnB",
       acts: [
         {
-          name: "B ON RAVE",
+          name: "P.TER",
           time: "22:00",
-          genre: "Neurofunk DnB",
+          genre: "Jump Up DnB",
         },
         {
           name: "DROPZ",
           time: "23:00",
-          genre: "Neurofunk DnB",
+          genre: "Dancefloor DnB",
         },
         {
-          name: "MARKO B2B TOTO",
+          name: "AMIDALA",
           time: "00:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "AUBI",
+          name: "BEA",
           time: "01:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "EXPLOZE",
+          name: "B ON RAVE",
           time: "02:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "AR:ES",
+          name: "KEON",
           time: "03:00",
           genre: "Neurofunk DnB",
         },
@@ -42,7 +42,43 @@ export const lineUpData: LineUp = {
           genre: "Neurofunk DnB",
         },
       ],
-      timetable: "/images/artists/neuro.webp",
-    }
+      timetable: "",
+    },
+    {
+      name: "Techno | Trance",
+      acts: [
+        {
+          name: "SODASELECTA",
+          time: "22:00",
+          genre: "Trance",
+        },
+        {
+          name: "BECCSLYN 1/2",
+          time: "23:00",
+          genre: "Trance",
+        },
+        {
+          name: "DO NOT DISTURB",
+          time: "00:00",
+          genre: "Techno",
+        },
+        {
+          name: "LECKO MIO",
+          time: "02:00",
+          genre: "Techno",
+        },
+        {
+          name: "ZP",
+          time: "03:00",
+          genre: "Schranz",
+        },
+        {
+          name: "ZEREMONIENMEISTER",
+          time: "04:00",
+          genre: "Hard Techno",
+        },
+      ],
+      timetable: "",
+    },
   ],
 };
