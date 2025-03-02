@@ -1,43 +1,43 @@
 import { LineUp } from "../types/LineUp";
 
 export const lineUpData: LineUp = {
-  headliners: ["BEA", "DO NOT DISTURB"],
+  headliners: ["PHYRU", "ASOM", "HONEY"],
   stages: [
     {
       name: "DnB",
       acts: [
         {
-          name: "P.TER",
+          name: "AMIDALA VS. DROPZ",
           time: "22:00",
-          genre: "Jump Up DnB",
-        },
-        {
-          name: "DROPZ",
-          time: "23:00",
           genre: "Dancefloor DnB",
         },
         {
-          name: "AMIDALA",
-          time: "00:00",
+          name: "KEON",
+          time: "23:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "BEA",
+          name: "PHYRU",
+          time: "00:00",
+          genre: "Crossbreed | Jump Up DnB",
+        },
+        {
+          name: "ASOM",
           time: "01:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "B ON RAVE",
+          name: "HONEY",
           time: "02:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "KEON",
+          name: "B ON RAVE VS. OPTIMIZ3D",
           time: "03:00",
           genre: "Neurofunk DnB",
         },
         {
-          name: "OPTIMIZ3D",
+          name: "CHOL3RIK3R",
           time: "04:00",
           genre: "Neurofunk DnB",
         },
@@ -45,38 +45,49 @@ export const lineUpData: LineUp = {
       timetable: "",
     },
     {
-      name: "Techno | Trance",
+      name: "Techno",
       acts: [
         {
-          name: "SODASELECTA",
+          name: "EM-KEY",
           time: "22:00",
-          genre: "Trance",
+          genre: "Techno",
         },
         {
-          name: "BECCSLYN 1/2",
+          name: "FABIAN GIRARD",
           time: "23:00",
-          genre: "Trance",
+          genre: "Techno",
         },
         {
-          name: "DO NOT DISTURB",
+          name: "IRONBASE",
           time: "00:00",
           genre: "Techno",
         },
         {
-          name: "LECKO MIO",
+          name: "QUEAVER",
           time: "02:00",
           genre: "Techno",
         },
         {
-          name: "ZP",
+          name: "TEKZENT",
           time: "03:00",
-          genre: "Schranz",
+          genre: "Techno",
+        },
+      ],
+      timetable: "",
+    },
+    {
+      name: "RNB",
+      acts: [
+        {
+          name: "TRIXX 77",
+          time: "22:00",
+          genre: "RNB",
         },
         {
-          name: "ZEREMONIENMEISTER",
-          time: "04:00",
-          genre: "Hard Techno",
-        },
+          name: "BEATZEPS",
+          time: "02:00",
+          genre: "RNB"
+        }
       ],
       timetable: "",
     },

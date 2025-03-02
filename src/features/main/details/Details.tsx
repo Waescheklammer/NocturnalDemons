@@ -74,7 +74,7 @@ export const Details = () => {
           </>
         ) : (
           <img
-            src={events.imgPromo}
+            src={events.imgCover}
             alt={"Nocturnal Demons"}
             style={{
               width: "60%",
