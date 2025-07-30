@@ -137,6 +137,23 @@ export const Events = () => {
                                     </ContentButton>
                                 </RouterLink>
                             </GlitchTypography>
+                            <br />
+                            <GlitchTypography>
+                                <RouterLink to={events.ticketLink}>
+                                    <ContentButton
+                                        sx={{
+                                            color: fontColor,
+                                            border: matchesPhone
+                                                ? "2px solid" + fontColor
+                                                : "1px solid" + fontColor,
+                                        }}
+                                        size={matchesBig ? "large" : "medium"}
+                                        variant={"outlined"}
+                                    >
+                                        {t("tickets")}
+                                    </ContentButton>
+                                </RouterLink>
+                            </GlitchTypography>
                         </Box>
                     </Grid>
                 </Grid>

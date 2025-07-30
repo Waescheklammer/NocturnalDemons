@@ -117,9 +117,7 @@ export const Header = () => {
                   color: "white",
                 }}
               >
-                <Typography variant={"h5"} sx={{ color: "grey", py: "0.5em", }}>
-                  {t("tickets")}
-                </Typography>
+                  <NavigationLink title={t("tickets")} link={"https://eventfrog.de/de/p/party/electro/nocturnal-demons-apocalypse-7355667685353457674.html"} sx={{ ml: matchesPhone ? "2em" : "0em" }}/>
               </Box>
             </Box>
           </Grid>
