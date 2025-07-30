@@ -77,7 +77,7 @@ export const Footer = () => {
                   href={"mailto:nocturnaldemons444@gmail.com"}
                   style={{ color: "white", textDecoration: "none" }}
                 >
-                  nocturnaldemons444@gmail.com
+                  booking@nocturnal-demons.de
                 </a>
               </Typography>
             </Grid>
