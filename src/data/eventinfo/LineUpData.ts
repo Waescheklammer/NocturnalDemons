@@ -64,12 +64,12 @@ export const lineUpData: LineUp = {
         },
         {
           name: "PHYRU",
-          time: "02:00",
+          time: "01:00",
           genre: "Techno",
         },
         {
           name: "ZP",
-          time: "03:00",
+          time: "02:00",
           genre: "Techno",
         },
         {
